@@ -121,26 +121,23 @@ footer{
 
 /* -----------Kana Ranking Page------------------ */
 
-p>.score {
-  text-align: center;
-  font-family: "Francois One", sans-serif;
-  color: white;
-  font-size: 15px;
-}
-
-p#score {
+#score {
   font-family: "Francois One", sans-serif;
   color: white;
   text-align: center;
   font-size: 30px;
+  color: #f28c11;
+  font-weight: bold ;
 }
 
-#resultpageavator {
+#resultavatar {
   width: 30%;
   height: 30%;
 }
 
-#resultpage {
+ol {
+  list-style: none;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -148,28 +145,34 @@ p#score {
   flex-direction: column;
 }
 
-ol {
-  list-style: none;
-  padding: 0;
-}
-
 ol>li {
   font-family: "Francois One", sans-serif;
   width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20%;
+  font-size: 2rem;
+  color: white;
 }
+/* #first,#second,#third{
+  margin-top: 30px;
+} */
 
 ol>li>img {
   width: 50%;
-  height: 50%;
 }
 
-div.playagain {
+.playagain {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: "Francois One", sans-serif;
   color: white;
+}
+.playagain *{
+  margin-bottom: 10px;
 }
 
 .playagain>button {
