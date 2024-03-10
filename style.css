@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Francois+One&display=swap") * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -20,6 +21,7 @@ h2 {
   color: white;
   font-size: 15px;
 }
+
 #logo {
   text-align: center;
 }
@@ -27,6 +29,7 @@ h2 {
 .container {
   padding: 5px;
 }
+
 .avatar {
   display: flex;
   flex-wrap: wrap;
@@ -60,4 +63,71 @@ input {
   margin-bottom: 8px;
   padding: 8px 14px;
   background-color: #f28c11;
+}
+
+/* -----------Kana Ranking Page------------------ */
+
+
+p>.score {
+  text-align: center;
+  font-family: "Francois One", sans-serif;
+  color: white;
+  font-size: 15px;
+}
+
+p#score {
+  font-family: "Francois One", sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+}
+
+#resultpageavator {
+  width: 30%;
+  height: 30%;
+}
+
+#resultpage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+ol>li {
+  font-family: "Francois One", sans-serif;
+  width: 200px;
+}
+
+ol>li>img {
+  width: 50%;
+  height: 50%;
+}
+
+div.playagain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Francois One", sans-serif;
+  color: white;
+}
+
+.playagain>button {
+  background-color: orange;
+  outline: none;
+  font-family: "Francois One", sans-serif;
+}
+
+footer {
+  text-align: center;
+  font-family: "Francois One", sans-serif;
+  color: white;
+  font-size: 15px;
 }
