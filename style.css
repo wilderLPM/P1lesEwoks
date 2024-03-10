@@ -95,7 +95,7 @@ footer{
   line-height: 25px;
 }
 .question .vrai, .faux{
-  font-size: 3rem;
+  font-size: ; /* A MODIFIER */
   width: 40%;
   padding: 10%;
   border-radius: 10%;
