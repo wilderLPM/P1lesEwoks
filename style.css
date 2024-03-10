@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #532884;
+  font-family: "François One", sans-serif;
 }
 
 h1 {
@@ -59,5 +60,58 @@ article {
 input {
   margin-bottom: 8px;
   padding: 8px 14px;
+  background-color: #f28c11;
+}
+
+/*CODE DE LEO-PAUL*/
+
+footer{
+  background-color: #f28c11;
+  color: white;
+  display:flex;
+  justify-content: center;
+}
+.question{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  color: white;
+}
+.question img{
+  width: 90%;
+}
+.question p{
+  width: 80%;
+  margin: 0% 10% 5%;
+  text-align: center;
+  background-color: #f28c11;
+  border: solid black;
+  border-width: 1px;
+  line-height: 25px;
+}
+.question .vrai, .faux{
+  font-size: 3rem;
+  width: 40%;
+  padding: 10%;
+  border-radius: 10%;
+  text-align: center;
+}
+.question button{
+  border: solid black;
+  border-width: 1px;
+  color: white;
+  font-family: inherit;
+  font-family: "Francois One", sans-serif;
+}
+.vrai{
+  background-color: #0aa67a;
+}
+.faux{
+ background-color: #F26444;
+}
+.question .suivant{
+  margin: 5% 40%;
   background-color: #f28c11;
 }
