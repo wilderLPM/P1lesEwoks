@@ -1,1 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Francois+One&display=swap") * {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #532884;
+}
 
+h1 {
+  text-align: center;
+  font-family: "Francois One", sans-serif;
+  color: white;
+  font-size: 20px;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Francois One", sans-serif;
+  color: white;
+  font-size: 15px;
+}
+#logo {
+  text-align: center;
+}
+
+.container {
+  padding: 5px;
+}
+.avatar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+article {
+  width: 28%;
+  margin: 15px;
+  border-radius: 50%;
+  background-color: #f28c11;
+}
+
+.pseudo {
+  text-align: center;
+  font-family: "Francois One", sans-serif;
+  color: white;
+}
+
+.button-start {
+  text-align: center;
+}
+
+#bouton-start {
+  background-color: #05a67a;
+  text-shadow: 0px -2px #05a67a;
+  border-radius: 80%;
+}
+
+input {
+  margin-bottom: 8px;
+  padding: 8px 14px;
+  background-color: #f28c11;
+}
