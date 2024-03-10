@@ -1,53 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="author" content="Thien, Kana, Léo-Paul Montalbetti" />
-    <meta
-      name="description"
-      content="Kaleien : Quizz pour apprendre en s'amusant !"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="Images/bear.jpg" type="image/x-icon" />
-    <title>Kaleien</title>
-  </head>
-  <body>
-    <!-- <nav></nav>-->
-    <!-- ------ Top page ------------- -->
-    <main>
-      <div id="logo">
-        <img src="images/logo-150.svg" alt="Logo Kaleien" width="40%" />
-      </div>
-      <h1>Choisissiez votre avatar</h1>
-      <div class="container">
-        <section class="avatar">
-          <article class="avatar1">
-            <img src="images/avatar1.svg" alt="Avatar 1" />
-          </article>
-          <article class="avatar2">
-            <img src="images/avatar2.svg" alt="Avatar 2" />
-          </article>
-          <article class="avatar3">
-            <img src="images/avatar3.svg" alt="Avatar 3" />
-          </article>
-          <article class="avatar4">
-            <img src="images/avatar4.svg" alt="Avatar 4" />
-          </article>
-        </section>
 
-        <section class="pseudo">
-          <h2>Entre ton pseudo</h2>
-          <input type="text" />
-          <br />
-        </section>
-      </div>
 
-      <section class="button-start">
-        <button id="bouton-start"><h2>Start</h2></button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="author" content="Thien, Kana, Léo-Paul Montalbetti" />
+  <meta name="description" content="Kaleien : Quizz pour apprendre en s'amusant !" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="Images/bear.jpg" type="image/x-icon" />
+  <title>Kaleien</title>
+</head>
+<body>
+  <!-- <nav></nav>-->
+  <!-- ------ Top page ------------- -->
+  <main>
+    <div id="logo">
+      <img src="/images/logo-150.svg" alt="Logo Kaleien" width="40%" />
+    </div>
+    <h1>Choisissiez votre avatar</h1>
+    <div class="container">
+      <section class="avatar">
+        <article class="avatar1">
+          <img src="/images/avatar1.svg" alt="Avatar 1" />
+        </article>
+        <article class="avatar2">
+          <img src="/images/avatar2.svg" alt="Avatar 2" />
+        </article>
+        <article class="avatar3">
+          <img src="/images/avatar3.svg" alt="Avatar 3" />
+        </article>
+        <article class="avatar4">
+          <img src="/images/avatar4.svg" alt="Avatar 4" />
+        </article>
       </section>
 
+      <section class="pseudo">
+        <h2>Entre ton pseudo</h2>
+        <input type="text" />
+        <br />
+      </section>
+    </div>
+
+
+    <section class="button-start">
+      <button id="bouton-start">
+        <h2>Start</h2>
+      </button>
+    </section>
+
+
       <!-- ------ Question page ------------- -->
+
+
       <section class="question" id="question1">
         <img src="images/baseball_kaleien.svg" />
         <p>
@@ -70,6 +75,7 @@
         <button>Suivant</button>
       </section>
 
+
       <section class="question" id="question3">
         <img src="images/solar-system.svg" />
         <p><strong>Question n°3 :</strong><br /></p>
@@ -77,6 +83,11 @@
         <button>FAUX</button>
         <button>Suivant</button>
       </section>
+
+
+      <section id="question4">
+        <img />
+        <p>Question</p>
 
       <section class="question" id="question4">
         <img />
@@ -86,6 +97,8 @@
         <button>Suivant</button>
       </section>
 
+
+
       <section class="question" id="question5">
         <img />
         <p><strong>Question n°5 :</strong><br /></p>
@@ -93,6 +106,8 @@
         <button>FAUX</button>
         <button>Suivant</button>
       </section>
+
+
 
       <section class="question" id="question6">
         <img />
@@ -102,6 +117,7 @@
         <button>Suivant</button>
       </section>
 
+
       <section class="question" id="question7">
         <img />
         <p><strong>Question n°7 :</strong><br /></p>
@@ -109,6 +125,8 @@
         <button>FAUX</button>
         <button>Suivant</button>
       </section>
+
+
 
       <section class="question" id="question8">
         <img />
@@ -133,31 +151,34 @@
         <button>FAUX</button>
         <button>Suivant</button>
       </section>
-      <!-- ------------ Result page --------------- -->\
-      <div id="resultpage">
-        <img />
-        <p>YOUR CORE :<span class="point">#</span></p>
-        <ol id="ranking">
-          <li><img />Thien<img /></li>
-          <li><img />Kana<img /></li>
-          <li><img />Yoda<img /></li>
+        
+    <!-- ------------ Result page --------------- -->\
+    <img id="resultavator" src="/images/avatar1.svg" alt="Avatar 1" />
+    <p id="score">YOUR CORE :10</p>
+    <section id="resultpage">
+      <div id="rankinglist">
+        <ol>
+          <li><img id="avatarrank1" src="/images/avatar1.svg" alt="Avatar 1" />Thien<img id="first"
+              src="/images/first.svg"></li>
+          <li><img id="avatarrank2" src="/images/avatar2.svg" alt="Avatar 2" />Kana<img id="second"
+              src="/images/second.svg"></li>
+          <li><img id="avatorrank3" src="/images/avatar3.svg" alt="Avatar 3" />Yoda<img id="third"
+              src="images\third.svg">
+          </li>
         </ol>
-        <button>PLAY AGAIN</button>
-        <label for="comment">Leave us comments:</label>
-        <input
-          name="comment"
-          id="comment"
-          type="text"
-          placeholder="Great Game!"
-          required
-          minlength="4"
-          maxlength="20"
-          size="20"
-        />
-      </div>
-    </main>
-    <footer>
-      <p>Copiright 2024 Wild Code School</p>
-    </footer>
-  </body>
+        </div>
+        <div class="playagain">
+          <button>PLAY AGAIN</button>
+          <label for="comment">Leave us comments:</label>
+          <input name="comment" id="comment" type="text" placeholder="Great Game!" required minlength="4" maxlength="20"
+            size="20">
+        </div>
+        <section />
+  </main>
+  <footer>
+    <p>Copiright 2024 Wild Code School</p>
+  </footer>
+</body>
+
 </html>
+
