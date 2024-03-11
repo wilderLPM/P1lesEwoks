@@ -121,7 +121,8 @@ footer{
 
 /* -----------Kana Ranking Page------------------ */
 
-#score {
+
+/* CODE OPTIONNEL LEO #score {
   font-family: "Francois One", sans-serif;
   color: white;
   text-align: center;
@@ -137,15 +138,37 @@ footer{
 
 ol {
   list-style: none;
-  padding: 0;
+  padding: 0; */
+
+#scoreimg {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
-ol>li {
+#scoreimg>img {
+  width: 40%;
+}
+
+.score {
+  font-family: "Francois One", sans-serif;
+  color: orange;
+  text-align: center;
+  font-size: 60px;
+}
+
+#rankinglist {
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+/*CODE OPTIONNEL DE LEO ol>li {
   font-family: "Francois One", sans-serif;
   width: 200px;
   display: flex;
@@ -154,36 +177,90 @@ ol>li {
   gap: 20%;
   font-size: 2rem;
   color: white;
+ */
+ol {
+  width: 70vw;
+  padding: 1rem;
+  background-color: orange;
+  border-radius: 40px;
+}
+
+li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  margin: 1rem;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+span {
+  font-family: "Francois One", sans-serif;
+  color: orange;
+  font-size: 5vh;
+  text-align: center;
+}
+
+.username {
+  font-family: "Francois One", sans-serif;
+  color: #532884;
+  font-size: 15px;
+}
+
+.points {
+  font-family: "Francois One", sans-serif;
+  color: #05a67a;
+  font-size: 15px;
+
 }
 /* #first,#second,#third{
   margin-top: 30px;
 } */
 
 ol>li>img {
-  width: 50%;
+
+  width: 15%;
+  height: 15%;
 }
 
-.playagain {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+#playagain {
+  font-family: "Francois One", sans-serif;
+  text-decoration: none;
+  width: 20vw;
+  height: 5vh;
+  background-color: orange;
+}
+
+label {
+
   font-family: "Francois One", sans-serif;
   color: white;
+  margin: 0.5rem;
 }
 .playagain *{
   margin-bottom: 10px;
 }
 
-.playagain>button {
-  background-color: orange;
-  outline: none;
+input {
   font-family: "Francois One", sans-serif;
+  color: white;
+
+}
+
+#comment {
+  background-color: white;
 }
 
 footer {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Francois One", sans-serif;
+  height: 10vh;
+  background-color: #f28c11;
   color: white;
-  font-size: 15px;
+  font-size: 10px;
 }
