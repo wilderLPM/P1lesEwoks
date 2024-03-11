@@ -121,6 +121,25 @@ footer{
 
 /* -----------Kana Ranking Page------------------ */
 
+
+/* CODE OPTIONNEL LEO #score {
+  font-family: "Francois One", sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  color: #f28c11;
+  font-weight: bold ;
+}
+
+#resultavatar {
+  width: 30%;
+  height: 30%;
+}
+
+ol {
+  list-style: none;
+  padding: 0; */
+
 #scoreimg {
   display: flex;
   flex-wrap: wrap;
@@ -140,6 +159,7 @@ footer{
 }
 
 #rankinglist {
+
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -147,6 +167,17 @@ footer{
   align-items: center;
 }
 
+
+/*CODE OPTIONNEL DE LEO ol>li {
+  font-family: "Francois One", sans-serif;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20%;
+  font-size: 2rem;
+  color: white;
+ */
 ol {
   width: 70vw;
   padding: 1rem;
@@ -183,9 +214,14 @@ span {
   font-family: "Francois One", sans-serif;
   color: #05a67a;
   font-size: 15px;
+
 }
+/* #first,#second,#third{
+  margin-top: 30px;
+} */
 
 ol>li>img {
+
   width: 15%;
   height: 15%;
 }
@@ -199,9 +235,13 @@ ol>li>img {
 }
 
 label {
+
   font-family: "Francois One", sans-serif;
   color: white;
   margin: 0.5rem;
+}
+.playagain *{
+  margin-bottom: 10px;
 }
 
 input {
