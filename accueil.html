@@ -1,211 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Thien, Kana, Léo-Paul Montalbetti" />
+    <meta
+      name="description"
+      content="Kaleien : Quizz pour apprendre en s'amusant !"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="Images/bear.jpg" type="image/x-icon" />
+    <!--------A MODIFIER-------->
+    <title>Kaleien</title>
+  </head>
+  <body>
+    <!-- ------ Top page ------------- -->
+    <main>
+      <div id="homepage">
+        <div id="pageTop">
+        <div id="logo">
+          <img src="images/logo-150.svg" alt="Logo Kaleien" width="30%" />
+        </div>
+        <h1>Choisis ton Avatar</h1>
+        <div class="container">
+          <section class="avatar">
+            <article class="avatar1">
+              <img src="images/avatar1.svg" alt="Avatar 1" id="chooseAvatar1" />
+            </article>
+            <article class="avatar2">
+              <img src="images/avatar2.svg" alt="Avatar 2" id="chooseAvatar2" />
+            </article>
+            <article class="avatar3">
+              <img src="images/avatar3.svg" alt="Avatar 3" id="chooseAvatar3" />
+            </article>
+            <article class="avatar4">
+              <img src="images/avatar4.svg" alt="Avatar 4" id="chooseAvatar4" />
+            </article>
+            </div>
+          </section>
 
+          <section class="pseudo">
+            <form id="pseudoForm">
+              <label for="pseudo"><h2>Nomme ton Avatar</h2></label><br />
+              <input type="text" id="pseudo" name="pseudo" required /><br />
+              <button type="button" onclick="validerPseudo()">Valider</button>
+            </form>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="author" content="Thien, Kana, Léo-Paul Montalbetti" />
-  <meta name="description" content="Kaleien : Quizz pour apprendre en s'amusant !" />
-  <link rel="stylesheet" href="style.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="Images/bear.jpg" type="image/x-icon" /> <!--------A MODIFIER-------->
-  <title>Kaleien</title>
-</head>
-
-<body>
-  <!-- <nav></nav>-->
-  <!-- ------ Top page ------------- -->
-  <main>
-    <div id="pageTop">
-      <div id="logo">
-        <img src="images/logo-150.svg" alt="Logo Kaleien" width="40%" />
-      </div>
-      <h1>Choisissiez votre avatar</h1>
-      <div class="container">
-        <section class="avatar">
-          <article class="avatar1">
-            <img src="images/avatar1.svg" alt="Avatar 1" />
-          </article>
-          <article class="avatar2">
-            <img src="images/avatar2.svg" alt="Avatar 2" />
-          </article>
-          <article class="avatar3">
-            <img src="images/avatar3.svg" alt="Avatar 3" />
-          </article>
-          <article class="avatar4">
-            <img src="images/avatar4.svg" alt="Avatar 4" />
-          </article>
+        <section class="button-start">
+          <button id="bouton-start">
+            <h2>Start</h2>
+          </button>
         </section>
       </div>
-    </div>
 
-    <section class="pseudo">
-      <h2>Entre ton pseudo</h2>
-      <input type="text" />
-      <br />
-    </section>
-    </div>
+      <!-- ------ Question page ------------- -->
 
+      <section class="question" id="question1">
+        <div class="header-question">
+          <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
+          <h3>Question n°1</h3>
+          <h4>Pseudo</h4>
+        </div>
+        <img src="images/baseball_kaleien.svg" />
+        <p>
+          <strong
+            >Le match de baseball le plus long du monde a duré plus de
+            8h.</strong
+          >
+        </p>
+        <button class="vrai correct">VRAI</button>
+        <button class="faux incorrect">FAUX</button>
+        <button class="suivant">Suivant</button>
+      </section>
 
-    <section class="button-start">
-      <button id="bouton-start">
-        <h2>Start</h2>
-      </button>
-    </section>
+      <section class="question" id="question2">
+        <div class="header-question">
+          <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
+          <h3>Question n°2</h3>
+          <h4 class="pseudo">Pseudo</h4>
+        </div>
+        <img src="images/programing.svg" />
+        <p>
+          <strong>Question n°2 :</strong><br />
+          Le langage de programmation le plus rémunérateur en 2023 est le C#
+        </p>
+        <button class="vrai incorrect">VRAI</button>
+        <button class="faux correct">FAUX</button>
+        <button class="suivant">Suivant</button>
+      </section>
 
+      <section class="question" id="question3">
+        <div class="header-question">
+          <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
+          <h3>Question n°3</h3>
+          <h4>Pseudo</h4>
+        </div>
+        <img src="images/solar-system.svg" />
 
-    <!-- ------ Question page ------------- -->
+        <p><strong>Question n°3 :</strong><br />La Terre est la troisième planète la plus proche du Soleil.</p>
+        <button class="vrai correct">VRAI</button>
+        <button class="faux incorrect">FAUX</button>
 
+        <button class="suivant">Suivant</button>
+      </section>
 
-    <section class="question" id="question1">
-      <div class="header-question">
-        <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
-        <h3>Question n°1</h3>
-        <h4>Pseudo</h4>
-      </div>
-      <img src="images/baseball_kaleien.svg" />
-      <p>
-        <strong>Le match de baseball le plus long
-          du monde a duré plus de 8h.</strong>
-      </p>
-      <button class="vrai">VRAI</button>
-      <button class="faux">FAUX</button>
-      <button class="suivant">Suivant</button>
-    </section>
+      <section class="question" id="question4">
+        <div class="header-question">
+          <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
+          <h3>Question n°4</h3>
+          <h4>Pseudo</h4>
 
+        <img src="images/french.svg"/>
+        <p><strong>Question n°4 :</strong><br />En France, il y a 15 jours feriés par an.</p>
+        <button class="vrai incorrect">VRAI</button>
+        <button class="faux correct">FAUX</button>
 
-    <section class="question" id="question2">
-      <div class="header-question">
-        <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
-        <h3>Question n°2</h3>
-        <h4 class="pseudo">Pseudo</h4>
-      </div>
-      <img src="images/programing.svg" />
-      <p>
-        <strong>Question n°2 :</strong><br />
-        Le langage de programmation le plus rémunérateur en 2023 est le C#
-      </p>
-      <button class="vrai">VRAI</button>
-      <button class="faux">FAUX</button>
-      <button class="suivant">Suivant</button>
-    </section>
+        <button class="suivant">Suivant</button>
+      </section>
 
+      <section class="question" id="question5">
+        <div class="header-question">
+          <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
+          <h3>Question n°5</h3>
+          <h4>Pseudo</h4>
+        </div>
+        <img src="images/Lyon-question.svg" />
+        <p><strong>Question n°5 :</strong><br /></p>
+        <button class="vrai">VRAI</button>
+        <button class="faux">FAUX</button>
+        <button class="suivant">Suivant</button>
+      </section>
 
-    <section class="question" id="question3">
-      <div class="header-question">
-        <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
-        <h3>Question n°3</h3>
-        <h4>Pseudo</h4>
-      </div>
-      <img src="images/solar-system.svg" />
-      <p><strong>Question n°3 :</strong><br />La Terre est la troisième planète la plus proche du Soleil.</p>
-      <button class="vrai">VRAI</button>
-      <button class="faux">FAUX</button>
-      <button class="suivant">Suivant</button>
-    </section>
+      <section class="question" id="question6">
+        <div class="header-question">
+          <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
+          <h3>Question n°6</h3>
+          <h4>Pseudo</h4>
+        </div>
+        <img src="images/cinema-question.svg" />
+        <p><strong>Question n°6 :</strong><br /></p>
+        <button class="vrai">VRAI</button>
+        <button class="faux">FAUX</button>
+        <button class="suivant">Suivant</button>
+      </section>
 
+      <section class="question" id="question7">
+        <div class="header-question">
+          <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
+          <h3>Question n°7</h3>
+          <h4>Pseudo</h4>
+        </div>
+        <img src="images/art-question.svg" />
+        <p><strong>Question n°7 :</strong><br /></p>
+        <button class="vrai">VRAI</button>
+        <button class="faux">FAUX</button>
+        <button class="suivant">Suivant</button>
+      </section>
 
-    <section class="question" id="question4">
-      <div class="header-question">
-        <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
-        <h3>Question n°4</h3>
-        <h4>Pseudo</h4>
-      </div>
-      <img src="images/french.svg" />
-      <p><strong>Question n°4 :</strong><br />En France, il y a 15 jours feriés par an.</p>
-      <button class="vrai">VRAI</button>
-      <button class="faux">FAUX</button>
-      <button class="suivant">Suivant</button>
-    </section>
+      <section class="question" id="question8">
+        <div class="header-question">
+          <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
+          <h3>Question n°8</h3>
+          <h4>Pseudo</h4>
+        </div>
+        <img src="images/pizza-question.svg" />
+        <p><strong>Question n°8 :</strong><br /></p>
+        <button class="vrai">VRAI</button>
+        <button class="faux">FAUX</button>
+        <button class="suivant">Suivant</button>
+      </section>
 
+      <section class="question" id="question9">
+        <div class="header-question">
+          <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
+          <h3>Question n°9</h3>
+          <h4>Pseudo</h4>
+        </div>
+        <img src="images/ewok-question.svg" />
+        <p><strong>Question n°9 :</strong><br /></p>
+        <button class="vrai">VRAI</button>
+        <button class="faux">FAUX</button>
+        <button class="suivant">Suivant</button>
+      </section>
 
-    <section class="question" id="question5">
-      <div class="header-question">
-        <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
-        <h3>Question n°5</h3>
-        <h4>Pseudo</h4>
-      </div>
-      <img src="images/Lyon-question.svg" />
-      <p><strong>Question n°5 :</strong><br /></p>
-      <button class="vrai">VRAI</button>
-      <button class="faux">FAUX</button>
-      <button class="suivant">Suivant</button>
-    </section>
+      <section class="question" id="question10">
+        <div class="header-question">
+          <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
+          <h3>Question n°10</h3>
+          <h4>Pseudo</h4>
+        </div>
+        <img src="images/onepiece-question.svg" />
+        <p><strong>Question n°10 :</strong><br /></p>
+        <button class="vrai">VRAI</button>
+        <button class="faux">FAUX</button>
+        <button class="suivant">Suivant</button>
+      </section>
 
-
-    <section class="question" id="question6">
-      <div class="header-question">
-        <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
-        <h3>Question n°6</h3>
-        <h4>Pseudo</h4>
-      </div>
-      <img src="images/cinema-question.svg" />
-      <p><strong>Question n°6 :</strong><br /></p>
-      <button class="vrai">VRAI</button>
-      <button class="faux">FAUX</button>
-      <button class="suivant">Suivant</button>
-    </section>
-
-
-    <section class="question" id="question7">
-      <div class="header-question">
-        <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
-        <h3>Question n°7</h3>
-        <h4>Pseudo</h4>
-      </div>
-      <img src="images/art-question.svg" />
-      <p><strong>Question n°7 :</strong><br /></p>
-      <button class="vrai">VRAI</button>
-      <button class="faux">FAUX</button>
-      <button class="suivant">Suivant</button>
-    </section>
-
-
-    <section class="question" id="question8">
-      <div class="header-question">
-        <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
-        <h3>Question n°8</h3>
-        <h4>Pseudo</h4>
-      </div>
-      <img src="images/pizza-question.svg" />
-      <p><strong>Question n°8 :</strong><br /></p>
-      <button class="vrai">VRAI</button>
-      <button class="faux">FAUX</button>
-      <button class="suivant">Suivant</button>
-    </section>
-
-
-    <section class="question" id="question9">
-      <div class="header-question">
-        <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
-        <h3>Question n°9</h3>
-        <h4>Pseudo</h4>
-      </div>
-      <img src="images/ewok-question.svg" />
-      <p><strong>Question n°9 :</strong><br /></p>
-      <button class="vrai">VRAI</button>
-      <button class="faux">FAUX</button>
-      <button class="suivant">Suivant</button>
-    </section>
-
-
-    <section class="question" id="question10">
-      <div class="header-question">
-        <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
-        <h3>Question n°10</h3>
-        <h4>Pseudo</h4>
-      </div>
-      <img src="images/onepiece-question.svg" />
-      <p><strong>Question n°10 :</strong><br /></p>
-      <button class="vrai">VRAI</button>
-      <button class="faux">FAUX</button>
-      <button class="suivant">Suivant</button>
-    </section>
-
-
-  </main>
-  <!-- ------------ Result page --------------- -->
-  <div id="pageRanking">
+    </main>
+    <!-- ------------ Result page --------------- -->
+     <div id="PageRanking">
     <div id="scoreimg">
       <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
     </div>
@@ -215,36 +208,64 @@
     </strong>
     <div id="rankinglist">
       <ol>
-        <li><img src="images/first.svg"><img src="images/avatar1.svg" alt="Avatar 1" /><span
-            class="username">Thien</span><span class="points">10
-            points</span></li>
-        <li><img src="images/second.svg"><img src="images/avatar2.svg" alt="Avatar 2" /><span
-            class="username">Léo-Paul</span><span class="points">9
-            points</span></li>
-        <li><img src="images\third.svg"><img src="images/avatar3.svg" alt="Avatar 3" /><span
-            class="username">Kana</span><span class="points">8
-            points</span></li>
-        <li><span>4</span><img src="images/avatar3.svg" alt="Avatar 3" /><span class="username">Yoda</span><span
-            class="points">5
-            points</span></li>
-        <li><span>5</span><img src="images/avatar3.svg" alt="Avatar 3" /><span class="username">Matthieu</span><span
-            class="points">4
-            points</span></li>
-        <li><span>6</span><img src="images/avatar3.svg" alt="Avatar 3" /><span class="username">Ben</span><span
-            class="points">3
-            points</span></li>
+        <li>
+          <img src="images/first.svg" /><img
+            src="images/avatar1.svg"
+            alt="Avatar 1"
+          /><span class="username">Thien</span
+          ><span class="points">10 points</span>
+        </li>
+        <li>
+          <img src="images/second.svg" /><img
+            src="images/avatar2.svg"
+            alt="Avatar 2"
+          /><span class="username">Léo-Paul</span
+          ><span class="points">9 points</span>
+        </li>
+        <li>
+          <img src="images\third.svg" /><img
+            src="images/avatar3.svg"
+            alt="Avatar 3"
+          /><span class="username">Kana</span
+          ><span class="points">8 points</span>
+        </li>
+        <li>
+          <span>4</span><img src="images/avatar3.svg" alt="Avatar 3" /><span
+            class="username"
+            >Yoda</span
+          ><span class="points">5 points</span>
+        </li>
+        <li>
+          <span>5</span><img src="images/avatar3.svg" alt="Avatar 3" /><span
+            class="username"
+            >Matthieu</span
+          ><span class="points">4 points</span>
+        </li>
+        <li>
+          <span>6</span><img src="images/avatar3.svg" alt="Avatar 3" /><span
+            class="username"
+            >Ben</span
+          ><span class="points">3 points</span>
+        </li>
       </ol>
       <button id="playagain">PLAY AGAIN</button>
       <label for="comment">Leave us a comment:</label>
-      <input name="comment" id="comment" type="text" placeholder="Great Game!" required minlength="4" maxlength="20"
-        size="25">
-      <button id="submitComment">Submit</button>
+      <input
+        name="comment"
+        id="comment"
+        type="text"
+        placeholder="Great Game!"
+        required
+        minlength="4"
+        maxlength="20"
+        size="25"
+      />
+    </div>
     </div>
     <footer>
       <p>Copiright 2024 Wild Code School</p>
     </footer>
-  </div>
-  <script src="index.js"></script>
-</body>
+    <script src="index.js"></script>
+  </body>
 
 </html>

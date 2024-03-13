@@ -15,14 +15,14 @@ h1 {
   text-align: center;
   font-family: "Francois One", sans-serif;
   color: white;
-  font-size: 20px;
+  margin: 0;
 }
 
 h2 {
   text-align: center;
   font-family: "Francois One", sans-serif;
   color: white;
-  font-size: 15px;
+  margin: 0;
 }
 
 #logo {
@@ -42,14 +42,16 @@ h2 {
 article {
   width: 28%;
   margin: 15px;
-  border-radius: 50%;
-  background-color: #f28c11;
 }
 
 .pseudo {
   text-align: center;
   font-family: "Francois One", sans-serif;
   color: white;
+}
+
+#pseudoForm {
+  margin: 0;
 }
 
 .button-start {
@@ -59,13 +61,17 @@ article {
 #bouton-start {
   background-color: #05a67a;
   text-shadow: 0px -2px #05a67a;
-  border-radius: 80%;
+  border-radius: 50%;
 }
 
 input {
   margin-bottom: 8px;
   padding: 8px 14px;
   background-color: #f28c11;
+}
+
+.avatar img {
+  overflow: visible;
 }
 
 /*------------------------CODE DE LEO-PAUL----------------------*/
@@ -86,16 +92,16 @@ footer {
   align-items: center;
 }
 
-.header-question>* {
+.header-question > * {
   justify-self: center;
 }
 
-.header-question>h3 {
+.header-question > h3 {
   grid-row: 1;
   font-size: 2rem;
 }
 
-.header-question>.pseudo {
+.header-question > .pseudo {
   grid-row: 2;
 }
 
@@ -119,11 +125,9 @@ footer {
   color: white;
 }
 
-
-.question>img {
+.question > img {
   width: 50%;
 }
-
 .question p {
   width: 70%;
   margin: 5% 10%;
@@ -150,7 +154,8 @@ footer {
   font-family: inherit;
   font-family: "Francois One", sans-serif;
   border-radius: 8px;
-  box-shadow: black 1px 1px 5px;
+    box-shadow: black 1px 1px 5px;
+  cursor: pointer;
 }
 
 .vrai {
@@ -158,9 +163,9 @@ footer {
 }
 
 .faux {
-  background-color: #F26444;
-}
+  background-color: #f26444;
 
+}
 .question .suivant {
   margin: 5% 0%;
   background-color: #f28c11;
@@ -177,7 +182,7 @@ footer {
   align-items: center;
 }
 
-#scoreimg>img {
+#scoreimg > img {
   width: 40%;
 }
 
@@ -189,7 +194,6 @@ footer {
 }
 
 #rankinglist {
-
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -213,7 +217,8 @@ li {
   margin: 1rem;
   border-radius: 10px;
   background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 span {
@@ -233,10 +238,11 @@ span {
   font-family: "Francois One", sans-serif;
   color: #05a67a;
   font-size: 15px;
-
 }
 
-ol>li>img {
+
+ol > li > img {
+
   width: 15%;
   height: 15%;
 }
@@ -250,7 +256,6 @@ ol>li>img {
 }
 
 label {
-
   font-family: "Francois One", sans-serif;
   color: white;
   margin: 0.5rem;
@@ -263,7 +268,6 @@ label {
 input {
   font-family: "Francois One", sans-serif;
   color: white;
-
 }
 
 #comment {
