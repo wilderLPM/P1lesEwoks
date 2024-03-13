@@ -110,7 +110,7 @@ footer {
   overflow: visible;
 }
 
-.question{
+.question {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -123,7 +123,8 @@ footer {
 .question>img {
   width: 50%;
 }
-.question p{
+
+.question p {
   width: 70%;
   margin: 5% 10%;
   padding: 2% 5%;
@@ -132,22 +133,24 @@ footer {
   border: none;
   line-height: 25px;
   box-shadow: black 1px 1px 5px;
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
-.question .vrai, .faux{
+.question .vrai,
+.faux {
   font-size: 3rem;
-    width: 30%;
-    height: 30%;
+  width: 30%;
+  height: 30%;
   text-align: center;
 }
-.question button{
-  border: none ; 
+
+.question button {
+  border: none;
   color: white;
   font-family: inherit;
   font-family: "Francois One", sans-serif;
   border-radius: 8px;
-    box-shadow: black 1px 1px 5px;
+  box-shadow: black 1px 1px 5px;
 }
 
 .vrai {
@@ -158,11 +161,11 @@ footer {
   background-color: #F26444;
 }
 
-.question .suivant{
+.question .suivant {
   margin: 5% 0%;
   background-color: #f28c11;
   width: 40%;
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 /* -----------Kana Ranking Page------------------ */
