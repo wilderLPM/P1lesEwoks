@@ -17,6 +17,7 @@
     <!-- ------ Top page ------------- -->
     <main>
       <div id="homepage">
+        <div id="pageTop">
         <div id="logo">
           <img src="images/logo-150.svg" alt="Logo Kaleien" width="30%" />
         </div>
@@ -35,6 +36,7 @@
             <article class="avatar4">
               <img src="images/avatar4.svg" alt="Avatar 4" id="chooseAvatar4" />
             </article>
+            </div>
           </section>
 
           <section class="pseudo">
@@ -43,13 +45,6 @@
               <input type="text" id="pseudo" name="pseudo" required /><br />
               <button type="button" onclick="validerPseudo()">Valider</button>
             </form>
-
-            <div id="resultat" style="display: none">
-              <h2>Ton pseudo</h2>
-              <p id="pseudoAffiche"></p>
-            </div>
-          </section>
-        </div>
 
         <section class="button-start">
           <button id="bouton-start">
@@ -203,6 +198,7 @@
 
     </main>
     <!-- ------------ Result page --------------- -->
+     <div id="PageRanking">
     <div id="scoreimg">
       <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
     </div>
@@ -264,6 +260,7 @@
         maxlength="20"
         size="25"
       />
+    </div>
     </div>
     <footer>
       <p>Copiright 2024 Wild Code School</p>

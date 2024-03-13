@@ -150,15 +150,12 @@ footer {
 
 .question button {
   border: none;
-
   color: white;
   font-family: inherit;
   font-family: "Francois One", sans-serif;
   border-radius: 8px;
-
     box-shadow: black 1px 1px 5px;
   cursor: pointer;
-
 }
 
 .vrai {
@@ -170,7 +167,6 @@ footer {
 
 }
 .question .suivant {
-
   margin: 5% 0%;
   background-color: #f28c11;
   width: 40%;
