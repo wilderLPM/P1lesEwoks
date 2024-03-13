@@ -68,13 +68,14 @@ input {
 
 /*------------------------CODE DE LEO-PAUL----------------------*/
 
-footer{
+footer {
   background-color: #f28c11;
   color: white;
-  display:flex;
+  display: flex;
   justify-content: center;
 }
-.question{
+
+.question {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -82,10 +83,12 @@ footer{
   gap: 10%;
   color: white;
 }
-.question img{
+
+.question img {
   width: 90%;
 }
-.question p{
+
+.question p {
   width: 80%;
   margin: 0% 10% 5%;
   text-align: center;
@@ -94,51 +97,39 @@ footer{
   border-width: 1px;
   line-height: 25px;
 }
-.question .vrai, .faux{
-  font-size: ; /* A MODIFIER */
+
+.question .vrai,
+.faux {
+  font-size: ;
+  /* A MODIFIER */
   width: 40%;
   padding: 10%;
   border-radius: 10%;
   text-align: center;
 }
-.question button{
+
+.question button {
   border: solid black;
   border-width: 1px;
   color: white;
   font-family: inherit;
   font-family: "Francois One", sans-serif;
 }
-.vrai{
+
+.vrai {
   background-color: #0aa67a;
 }
-.faux{
- background-color: #F26444;
+
+.faux {
+  background-color: #F26444;
 }
-.question .suivant{
+
+.question .suivant {
   margin: 5% 40%;
   background-color: #f28c11;
 }
 
 /* -----------Kana Ranking Page------------------ */
-
-
-/* CODE OPTIONNEL LEO #score {
-  font-family: "Francois One", sans-serif;
-  color: white;
-  text-align: center;
-  font-size: 30px;
-  color: #f28c11;
-  font-weight: bold ;
-}
-
-#resultavatar {
-  width: 30%;
-  height: 30%;
-}
-
-ol {
-  list-style: none;
-  padding: 0; */
 
 #scoreimg {
   display: flex;
@@ -167,17 +158,6 @@ ol {
   align-items: center;
 }
 
-
-/*CODE OPTIONNEL DE LEO ol>li {
-  font-family: "Francois One", sans-serif;
-  width: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 20%;
-  font-size: 2rem;
-  color: white;
- */
 ol {
   width: 70vw;
   padding: 1rem;
@@ -216,12 +196,8 @@ span {
   font-size: 15px;
 
 }
-/* #first,#second,#third{
-  margin-top: 30px;
-} */
 
 ol>li>img {
-
   width: 15%;
   height: 15%;
 }
@@ -240,7 +216,8 @@ label {
   color: white;
   margin: 0.5rem;
 }
-.playagain *{
+
+.playagain * {
   margin-bottom: 10px;
 }
 
