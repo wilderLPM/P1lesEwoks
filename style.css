@@ -155,14 +155,19 @@ footer {
   font-family: inherit;
   font-family: "Francois One", sans-serif;
   border-radius: 8px;
-  box-shadow: black 1px 1px 5px;
+
+    box-shadow: black 1px 1px 5px;
+  cursor: pointer;
+
 }
 
 .vrai {
   background-color: #0aa67a;
 }
+
 .faux {
   background-color: #f26444;
+
 }
 .question .suivant {
 
