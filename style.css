@@ -70,12 +70,13 @@ input {
 
 /*------------------------CODE DE LEO-PAUL----------------------*/
 
-footer{
+footer {
   background-color: #f28c11;
   color: white;
-  display:flex;
+  display: flex;
   justify-content: center;
 }
+
 .header-question {
   padding-left: 5%;
   width: 100%;
@@ -108,6 +109,7 @@ footer{
   border-width: 1px;
   overflow: visible;
 }
+
 .question{
   display: flex;
   flex-wrap: wrap;
@@ -116,13 +118,15 @@ footer{
   gap: 10%;
   color: white;
 }
+
+
 .question>img {
   width: 50%;
 }
 .question p{
   width: 70%;
-    margin: 5% 10%;
-    padding: 2% 5%;
+  margin: 5% 10%;
+  padding: 2% 5%;
   text-align: center;
   background-color: #f28c11;
   border: none;
@@ -130,6 +134,7 @@ footer{
   box-shadow: black 1px 1px 5px;
     font-size: 1.2rem;
 }
+
 .question .vrai, .faux{
   font-size: 3rem;
     width: 30%;
@@ -137,19 +142,22 @@ footer{
   text-align: center;
 }
 .question button{
-  border: none;
+  border: none ; 
   color: white;
   font-family: inherit;
   font-family: "Francois One", sans-serif;
   border-radius: 8px;
     box-shadow: black 1px 1px 5px;
 }
-.vrai{
+
+.vrai {
   background-color: #0aa67a;
 }
-.faux{
- background-color: #F26444;
+
+.faux {
+  background-color: #F26444;
 }
+
 .question .suivant{
   margin: 5% 0%;
   background-color: #f28c11;
@@ -158,7 +166,6 @@ footer{
 }
 
 /* -----------Kana Ranking Page------------------ */
-
 
 #scoreimg {
   display: flex;
@@ -186,8 +193,6 @@ footer{
   justify-content: space-around;
   align-items: center;
 }
-
-
 
 ol {
   width: 70vw;
@@ -227,12 +232,8 @@ span {
   font-size: 15px;
 
 }
-/* #first,#second,#third{
-  margin-top: 30px;
-} */
 
 ol>li>img {
-
   width: 15%;
   height: 15%;
 }
@@ -251,7 +252,8 @@ label {
   color: white;
   margin: 0.5rem;
 }
-.playagain *{
+
+.playagain * {
   margin-bottom: 10px;
 }
 
