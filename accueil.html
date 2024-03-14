@@ -16,29 +16,29 @@
   <body>
     <!-- ------ Top page ------------- -->
     <main>
-      <div id="homepage">
-        <div id="pageTop">
-        <div id="logo">
-          <img src="images/logo-150.svg" alt="Logo Kaleien" width="30%" />
-        </div>
-        <h1>Choisis ton Avatar</h1>
-        <div class="container">
-          <section class="avatar">
-            <article class="avatar1">
-              <img src="images/avatar1.svg" alt="Avatar 1" id="chooseAvatar1" />
-            </article>
-            <article class="avatar2">
-              <img src="images/avatar2.svg" alt="Avatar 2" id="chooseAvatar2" />
-            </article>
-            <article class="avatar3">
-              <img src="images/avatar3.svg" alt="Avatar 3" id="chooseAvatar3" />
-            </article>
-            <article class="avatar4">
-              <img src="images/avatar4.svg" alt="Avatar 4" id="chooseAvatar4" />
-            </article>
-            </div>
-          </section>
-
+      <div id="homepage"> <!-- HOMEPAGE -->
+        <div id="pageTop"></div>
+          <div id="logo">
+            <img src="images/logo-150.svg" alt="Logo Kaleien" width="30%" />
+          </div>
+            <h1>Choisis ton Avatar</h1>
+              <div class="container">
+                  <section class="avatar">
+                    <article class="avatar1">
+                      <img src="images/avatar1.svg" alt="Avatar 1" id="chooseAvatar1" />
+                    </article>
+                    <article class="avatar2">
+                      <img src="images/avatar2.svg" alt="Avatar 2" id="chooseAvatar2" />
+                   </article>
+                   <article class="avatar3">
+                      <img src="images/avatar3.svg" alt="Avatar 3" id="chooseAvatar3" />
+                  </article>
+                  <article class="avatar4">
+                      <img src="images/avatar4.svg" alt="Avatar 4" id="chooseAvatar4" />
+                  </article>
+                  </section>
+                </div>
+                
           <section class="pseudo">
             <form id="pseudoForm">
               <label for="pseudo"><h2>Nomme ton Avatar</h2></label><br />
@@ -47,14 +47,16 @@
             </form>
 
         <section class="button-start">
-          <button id="bouton-start">
+          <button id="btn_start" class="start">
             <h2>Start</h2>
           </button>
         </section>
-      </div>
+      </div> <!-- HOMEPAGE -->
 
       <!-- ------ Question page ------------- -->
 
+    <!-- QUESTION 1 -->
+      <div id="questions_screen" class="questions_screen">
       <section class="question" id="question1">
         <div class="header-question">
           <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
@@ -63,16 +65,16 @@
         </div>
         <img src="images/baseball_kaleien.svg" />
         <p>
-          <strong
-            >Le match de baseball le plus long du monde a duré plus de
-            8h.</strong
-          >
+        
+          <strong>Question n°1 :</strong>
         </p>
         <button class="vrai correct">VRAI</button>
         <button class="faux incorrect">FAUX</button>
-        <button class="suivant">Suivant</button>
+        <button id ="btn_next" class="suivant">Suivant</button>
       </section>
-
+      </div>
+<!-- QUESTION 2 -->
+      <div id="questions_screen2" class="questions_screen2">
       <section class="question" id="question2">
         <div class="header-question">
           <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
@@ -81,14 +83,15 @@
         </div>
         <img src="images/programing.svg" />
         <p>
-          <strong>Question n°2 :</strong><br />
-          Le langage de programmation le plus rémunérateur en 2023 est le C#
+          <strong>Question n°2 :</strong>
         </p>
         <button class="vrai incorrect">VRAI</button>
         <button class="faux correct">FAUX</button>
-        <button class="suivant">Suivant</button>
+        <button id ="btn_next2" class="suivant">Suivant</button>
       </section>
-
+      </div>
+<!-- QUESTION 3 -->
+      <div id="questions_screen3" class="questions_screen3">
       <section class="question" id="question3">
         <div class="header-question">
           <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
@@ -97,27 +100,30 @@
         </div>
         <img src="images/solar-system.svg" />
 
-        <p><strong>Question n°3 :</strong><br />La Terre est la troisième planète la plus proche du Soleil.</p>
+        <p><strong>Question n°3 :</strong></p>
         <button class="vrai correct">VRAI</button>
         <button class="faux incorrect">FAUX</button>
 
-        <button class="suivant">Suivant</button>
-      </section>
-
+        <button id="btn_next3" class="suivant">Suivant</button>
+      </div>
+<!-- QUESTION 4 -->
+      <div id="questions_screen4" class="questions_screen4">
       <section class="question" id="question4">
         <div class="header-question">
           <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
           <h3>Question n°4</h3>
           <h4>Pseudo</h4>
-
+          </div>
         <img src="images/french.svg"/>
-        <p><strong>Question n°4 :</strong><br />En France, il y a 15 jours feriés par an.</p>
+        <p><strong>Question n°4 :</strong></p>
         <button class="vrai incorrect">VRAI</button>
         <button class="faux correct">FAUX</button>
 
-        <button class="suivant">Suivant</button>
+        <button id="btn_next4" class="suivant">Suivant</button>
       </section>
-
+      </div>
+<!-- QUESTION 5 -->
+      <div id="questions_screen5" class="questions_screen5">
       <section class="question" id="question5">
         <div class="header-question">
           <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
@@ -128,9 +134,11 @@
         <p><strong>Question n°5 :</strong><br /></p>
         <button class="vrai">VRAI</button>
         <button class="faux">FAUX</button>
-        <button class="suivant">Suivant</button>
+        <button id="btn_next5" class="suivant">Suivant</button>
       </section>
-
+      </div>
+<!-- QUESTION 6 -->
+      <div id="questions_screen6" class="questions_screen6">
       <section class="question" id="question6">
         <div class="header-question">
           <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
@@ -141,9 +149,11 @@
         <p><strong>Question n°6 :</strong><br /></p>
         <button class="vrai">VRAI</button>
         <button class="faux">FAUX</button>
-        <button class="suivant">Suivant</button>
+        <button id="btn_next6" class="suivant">Suivant</button>
       </section>
-
+      </div>
+<!-- QUESTION 7 -->
+ <div id="questions_screen7" class="questions_screen7">
       <section class="question" id="question7">
         <div class="header-question">
           <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
@@ -154,9 +164,11 @@
         <p><strong>Question n°7 :</strong><br /></p>
         <button class="vrai">VRAI</button>
         <button class="faux">FAUX</button>
-        <button class="suivant">Suivant</button>
+        <button id="btn_next7" class="suivant">Suivant</button>
       </section>
-
+      </div>
+<!-- QUESTION 8 -->
+      <div id="questions_screen8" class="questions_screen8">
       <section class="question" id="question8">
         <div class="header-question">
           <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
@@ -167,9 +179,11 @@
         <p><strong>Question n°8 :</strong><br /></p>
         <button class="vrai">VRAI</button>
         <button class="faux">FAUX</button>
-        <button class="suivant">Suivant</button>
+        <button id="btn_next8" class="suivant">Suivant</button>
       </section>
-
+      </div>
+<!-- QUESTION 9 -->
+      <div id="questions_screen9" class="questions_screen9">
       <section class="question" id="question9">
         <div class="header-question">
           <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
@@ -180,9 +194,11 @@
         <p><strong>Question n°9 :</strong><br /></p>
         <button class="vrai">VRAI</button>
         <button class="faux">FAUX</button>
-        <button class="suivant">Suivant</button>
+        <button id="btn_next9" class="suivant">Suivant</button>
       </section>
-
+      </div>
+<!-- QUESTION  -->
+      <div id="questions_screen10" class="questions_screen10">
       <section class="question" id="question10">
         <div class="header-question">
           <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
@@ -193,11 +209,13 @@
         <p><strong>Question n°10 :</strong><br /></p>
         <button class="vrai">VRAI</button>
         <button class="faux">FAUX</button>
-        <button class="suivant">Suivant</button>
+        <button id="btn_next10" class="suivant">Suivant</button>
       </section>
-
+      </div>
+      </section>
     </main>
     <!-- ------------ Result page --------------- -->
+    <div id="result_screen" class="result_screen">
      <div id="PageRanking">
     <div id="scoreimg">
       <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
@@ -262,6 +280,7 @@
       />
     </div>
     </div>
+  </div>
     <footer>
       <p>Copiright 2024 Wild Code School</p>
     </footer>
