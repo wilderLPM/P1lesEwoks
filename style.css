@@ -22,16 +22,7 @@ h1 {
   display: block;
 }
 
-.questions_screen,
-.questions_screen2,
-.questions_screen3,
-.questions_screen4,
-.questions_screen5,
-.questions_screen6,
-.questions_screen7,
-.questions_screen8,
-.questions_screen9,
-.questions_screen10 {
+.questions_screen {
   display: none;
 }
 
@@ -104,7 +95,7 @@ footer {
   justify-content: center;
 }
 
-.header-question {
+.question-header {
   padding-left: 5%;
   width: 100%;
   height: 10%;
@@ -113,16 +104,16 @@ footer {
   align-items: center;
 }
 
-.header-question > * {
+.question-header>* {
   justify-self: center;
 }
 
-.header-question > h3 {
+.questionheader>h3 {
   grid-row: 1;
   font-size: 2rem;
 }
 
-.header-question > .pseudo {
+.question-header>.pseudo {
   grid-row: 2;
 }
 
@@ -137,7 +128,9 @@ footer {
   overflow: visible;
 }
 
-.question {
+/*------CE QUI EST CI-DESSOUS EST DEJA MODIFIE -------*/
+.question-card,
+.card-buttons {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -146,10 +139,11 @@ footer {
   color: white;
 }
 
-.question > img {
+.question-img {
   width: 50%;
 }
-.question p {
+
+.question-text {
   width: 70%;
   margin: 5% 10%;
   padding: 2% 5%;
@@ -161,15 +155,15 @@ footer {
   font-size: 1.2rem;
 }
 
-.question .vrai,
-.faux {
+.true,
+.false {
   font-size: 3rem;
   width: 30%;
   height: 30%;
   text-align: center;
 }
 
-.question button {
+main button {
   border: none;
   color: white;
   font-family: inherit;
@@ -179,19 +173,23 @@ footer {
   cursor: pointer;
 }
 
-.vrai {
+.true {
   background-color: #0aa67a;
 }
 
-.faux {
+.false {
   background-color: #f26444;
 }
-.question .suivant {
-  margin: 5% 0%;
+
+.suivant {
+  margin: 5% auto;
+  display: block;
   background-color: #f28c11;
   width: 40%;
   font-size: 1.5rem;
 }
+
+/*------CE QUI EST CI-DESSUS EST DEJA MODIFIE -------*/
 
 /* -----------Kana Ranking Page------------------ */
 
@@ -202,7 +200,7 @@ footer {
   align-items: center;
 }
 
-#scoreimg > img {
+#scoreimg>img {
   width: 40%;
 }
 
@@ -261,7 +259,7 @@ span {
 
 }
 
-ol > li > img {
+ol>li>img {
   width: 15%;
   height: 15%;
 }
@@ -314,7 +312,7 @@ footer {
   font-size: 10px;
 }
 
-.star {
+/* .star {
   animation: kirakira 8s linear;
   color: yellow;
   display: inline-block;
@@ -333,4 +331,4 @@ footer {
   100% {
     transform: translateY(calc(100vh + 1em)) rotateY(3600deg);
   }
-}
+} */
