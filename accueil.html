@@ -55,60 +55,68 @@
 
     <!-- ------ Question page ------------- -->
 
-    <div id="questions_screen" class="questions_screen">
-      <div class="question-header">
-        <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
-        <h3 class="question-number"></h3> <!-----------Va se remplir grâce au code JS---------->
-        <h4 class="pseudo">Pseudo</h4>
+      <div id="questions_screen" class="questions_screen">
+        <div class="question-header">
+          <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
+          <h3 class="question-number"></h3> <!-----------Va se remplir grâce au code JS---------->
+          <h4 class="pseudo">Pseudo</h4>
+        </div>
+        <!---------------QUESTION CARDS HERE------------->
       </div>
-      <!---------------QUESTION CARDS HERE------------->
-    </div>
-    <button id="btn_next" class="suivant">Suivant</button>
-  </main>
-  <!-- ------------ Result page --------------- -->
-  <div id="result_screen" class="result_screen">
-    <div id="PageRanking">
+      <button id ="btn_next" class="suivant">Suivant</button>
+    </main>
+    <!-- ------------ Result page --------------- -->
+    <div id="result_screen" class="result_screen">
+     <div id="PageRanking">
       <div id="scoreimg">
         <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
       </div>
       <strong>
-        <p class="score">YOUR NAME</p>
-        <p class="score">YOUR SCORE : 8/10</p>
+      <p class="score">YOUR NAME</p>
+      <p class="score">YOUR SCORE : 8/10</p>
       </strong>
       <div id="rankinglist">
-        <ol>
-          <li id="user1"><img src="images/first.svg"><img src="images/avatar1.svg" alt="Avatar 1" /><span
-              class="username">Thien</span><span class="points">10
-              points</span></li>
-          <li id="user2"><img src="images/second.svg"><img src="images/avatar2.svg" alt="Avatar 2" /><span
-              class="username">Léo-Paul</span><span class="points">9
-              points</span></li>
-          <li id="user3"><img src="images\third.svg"><img src="images/avatar3.svg" alt="Avatar 3" /><span
-              class="username">Kana</span><span class="points">8
-              points</span></li>
-          <li id="user4"><span>4</span><img src="images/avatar3.svg" alt="Avatar 3" /><span
-              class="username">Yoda</span><span class="points">5
-              points</span></li>
-          <li id="user4"><span>5</span><img src="images/avatar3.svg" alt="Avatar 3" /><span
-              class="username">Matthieu</span><span class="points">4
-              points</span></li>
-          <li id="user5"><span>6</span><img src="images/avatar3.svg" alt="Avatar 3" /><span
-              class="username">Ben</span><span class="points">3
-              points</span></li>
-        </ol>
-        <button id="playagain">PLAY AGAIN</button>
-        <label for="comment">Leave us a comment:</label>
-        <input name="comment" id="comment" type="text" placeholder="Great Game!" required minlength="4" maxlength="20"
-          size="25" />
+      <ol>
+        <li id="user1"><img src="images/first.svg"><img src="images/avatar1.svg" alt="Avatar 1" /><span
+            class="username">Thien</span><span class="points">10
+            points</span></li>
+        <li id="user2"><img src="images/second.svg"><img src="images/avatar2.svg" alt="Avatar 2" /><span
+            class="username">Léo-Paul</span><span class="points">9
+            points</span></li>
+        <li id="user3"><img src="images\third.svg"><img src="images/avatar3.svg" alt="Avatar 3" /><span
+            class="username">Kana</span><span class="points">8
+            points</span></li>
+        <li id="user4"><span>4</span><img src="images/avatar3.svg" alt="Avatar 3" /><span
+            class="username">Yoda</span><span class="points">5
+            points</span></li>
+        <li id="user4"><span>5</span><img src="images/avatar3.svg" alt="Avatar 3" /><span
+            class="username">Matthieu</span><span class="points">4
+            points</span></li>
+        <li id="user5"><span>6</span><img src="images/avatar3.svg" alt="Avatar 3" /><span
+            class="username">Ben</span><span class="points">3
+            points</span></li>
+      </ol>
+      <button id="playagain">PLAY AGAIN</button>
+      <label for="comment">Leave us a comment:</label>
+      <input
+        name="comment"
+        id="comment"
+        type="text"
+        placeholder="Great Game!"
+        required
+        minlength="4"
+        maxlength="20"
+        size="25"
+      />
       </div>
+     </div>
     </div>
-  </div>
-  <footer>
-    <p>Copiright 2024 Wild Code School</p>
-  </footer>
-  <script src="questionCards.js"></script>
-  <script src="createQuestion.js"></script>
-  <script src="index.js"></script>
-</body>
+    <footer>
+      <p>Copiright 2024 Wild Code School</p>
+    </footer>
+    <script src="questionCards.js"></script>
+    <script src="createQuestion.js"></script>
+    <script src="index.js"></script>
+  </body>
 
 </html>
