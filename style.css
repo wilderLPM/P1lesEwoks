@@ -312,7 +312,7 @@ footer {
   font-size: 10px;
 }
 
-.star {
+/* .star {
   animation: kirakira 8s linear;
   color: yellow;
   display: inline-block;
@@ -331,4 +331,4 @@ footer {
   100% {
     transform: translateY(calc(100vh + 1em)) rotateY(3600deg);
   }
-}
+} */

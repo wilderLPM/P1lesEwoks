@@ -1,59 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="author" content="Thien, Kana, Léo-Paul Montalbetti" />
-    <meta
-      name="description"
-      content="Kaleien : Quizz pour apprendre en s'amusant !"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="Images/bear.jpg" type="image/x-icon" />
-    <!--------A MODIFIER-------->
-    <title>Kaleien</title>
-  </head>
-  <body>
-    <!-- ------ Top page ------------- -->
-    <main>
-      <div id="homepage"> <!-- HOMEPAGE -->
-        <div id="pageTop"></div>
-          <div id="logo">
-            <img src="images/logo-150.svg" alt="Logo Kaleien" width="30%" />
-          </div>
-            <h1>Choisis ton Avatar</h1>
-              <div class="container">
-                  <section class="avatar">
-                    <article class="avatar1">
-                      <img src="images/avatar1.svg" alt="Avatar 1" id="chooseAvatar1" />
-                    </article>
-                    <article class="avatar2">
-                      <img src="images/avatar2.svg" alt="Avatar 2" id="chooseAvatar2" />
-                   </article>
-                   <article class="avatar3">
-                      <img src="images/avatar3.svg" alt="Avatar 3" id="chooseAvatar3" />
-                  </article>
-                  <article class="avatar4">
-                      <img src="images/avatar4.svg" alt="Avatar 4" id="chooseAvatar4" />
-                  </article>
-                  </section>
-                </div>
-                
-          <section class="pseudo">
-            <form id="pseudoForm">
-              <label for="pseudo"><h2>Nomme ton Avatar</h2></label><br />
-              <input type="text" id="pseudo" name="pseudo" required /><br />
-              <button type="button" onclick="validerPseudo()">Valider</button>
-            </form>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="author" content="Thien, Kana, Léo-Paul Montalbetti" />
+  <meta name="description" content="Kaleien : Quizz pour apprendre en s'amusant !" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="Images/bear.jpg" type="image/x-icon" />
+  <!--------A MODIFIER-------->
+  <title>Kaleien</title>
+</head>
+
+<body>
+  <!-- ------ Top page ------------- -->
+  <main>
+    <div id="homepage"> <!-- HOMEPAGE -->
+      <div id="pageTop"></div>
+      <div id="logo">
+        <img src="images/logo-150.svg" alt="Logo Kaleien" width="30%" />
+      </div>
+      <h1>Choisis ton Avatar</h1>
+      <div class="container">
+        <section class="avatar">
+          <article class="avatar1">
+            <img src="images/avatar1.svg" alt="Avatar 1" id="chooseAvatar1" />
+          </article>
+          <article class="avatar2">
+            <img src="images/avatar2.svg" alt="Avatar 2" id="chooseAvatar2" />
+          </article>
+          <article class="avatar3">
+            <img src="images/avatar3.svg" alt="Avatar 3" id="chooseAvatar3" />
+          </article>
+          <article class="avatar4">
+            <img src="images/avatar4.svg" alt="Avatar 4" id="chooseAvatar4" />
+          </article>
+        </section>
+      </div>
+
+      <section class="pseudo">
+        <form id="pseudoForm">
+          <label for="pseudo">
+            <h2>Nomme ton Avatar</h2>
+          </label><br />
+          <input type="text" id="pseudo" name="pseudo" required /><br />
+          <button type="button" onclick="validerPseudo()">Valider</button>
+        </form>
 
         <section class="button-start">
           <button id="btn_start" class="start">
             <h2>Start</h2>
           </button>
         </section>
-      </div> <!-- HOMEPAGE -->
+    </div> <!-- HOMEPAGE -->
 
-      <!-- ------ Question page ------------- -->
+    <!-- ------ Question page ------------- -->
 
       <div id="questions_screen" class="questions_screen">
         <div class="question-header">
