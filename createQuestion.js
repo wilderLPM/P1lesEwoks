@@ -1,4 +1,7 @@
+let score = 0;
+
 function createQuestion(card) {
+    console.log("jhgkjghg");
     // On récupère le parent dans lequel toutes nos question cards vont aller
     let questionScreen = document.getElementsByClassName("questions_screen")[0];
 
@@ -24,11 +27,31 @@ function createQuestion(card) {
     buttonTrue.innerText = "VRAI";
     buttonTrue.classList.add("true", "answer-button", card.vrai);  // On donne au boutton la classe 
     // correct/incorrect en fonction de la question
-    cardButtons.appendChild(buttonTrue); // On met la balise <button> créée, en enfant du div "cardButtons"
 
     let buttonFalse = document.createElement("button");
     buttonFalse.innerText = "FAUX";
     buttonFalse.classList.add("false", "answer-button", card.faux);
+
+    // Kana compter des scores de utiliseteur, il faut s'affichier sur chque page-> Je le fait dans la semaine prochaine. 
+    if (card.answer === true) {
+        buttonTrue.addEventListener('click', function () {
+            score = score + 1;
+            // scoreBlock?.innerText = score;
+            console.log(score);
+        })
+    }
+    else {
+        buttonFalse.addEventListener('click', function () {
+            score = score + 1;
+            // scoreBlock?.innerText = score;
+            console.log(score);
+        })
+    }
+
+
+
+
+    cardButtons.appendChild(buttonTrue); // On met la balise <button> créée, en enfant du div "cardButtons"
     cardButtons.appendChild(buttonFalse); // Deuxième enfant de cardButtons
 
     questionCard.appendChild(cardButtons); // Troisème enfant de questionCard
@@ -36,7 +59,14 @@ function createQuestion(card) {
     questionScreen.appendChild(cardButtons);
 }
 // On crée les 10 questionCards à l'aide d'une boucle
-for (const value of questionCards) {
+for (const value of questionCards) { // On va chercher le tableau "questionCards"
     createQuestion(value);
     console.log("Done"); // Message de vérification
 }
+
+// Kana - ca marche pas maintenant,il faut creer le class pour dernier button "suivant" -> Kana faire lundi 
+
+let showUpSummary = document.querySelector('.suivant');
+showUpSummary.addEventListener('click', function () {
+    console.log(score)
+}); 
