@@ -1,22 +1,27 @@
 # P1lesEwoks
 
-To Do :
+Everyone :
+
+- écrire les réponses
+
 
 Léo-Paul :
 
-- refaire fonctions JS pour que tout se mette au bon endroit
-- CSS questionCards
 - refaire JS des bouttons
 - rajouter des alts aux images
-- coder le remplacement de la question par la réponse
+- essayer de faire un beau questionBlock
 
 Thien :
 
-- Changer code JS transition entre questions
+- nettoyage de code
+
+Kana :
+
+- Responsive : desktop version
 
 
--------IDEES----------
+-------IDEES SI ON A LE TEMPS----------
 
-- créer une image "work in progress" que l'on mettra à toutes les futurs questions que l'on va ajouter;
--
+- 
+- 
 
