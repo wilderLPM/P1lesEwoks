@@ -10,7 +10,7 @@ Léo-Paul :
 - disable boutton "Suivant" tant que user n'a pas répondu
 - rajouter des alts aux images
 - essayer de faire un beau questionBlock
-- Réparer la fonctionnalité "Play Again"
+- Réparer la fonctionnalité "Play Again" pour le footer
 
 Thien :
 
