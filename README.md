@@ -2,7 +2,7 @@
 
 Everyone :
 
-- écrire les réponses
+- écrire les réponses (questionCards:solution)
 
 
 Léo-Paul :
@@ -15,6 +15,7 @@ Léo-Paul :
 Thien :
 
 - nettoyage de code
+- ajouter icone
 
 Kana :
 
