@@ -7,9 +7,10 @@ Everyone :
 
 Léo-Paul :
 
-- refaire JS des bouttons
+- disable boutton "Suivant" tant que user n'a pas répondu
 - rajouter des alts aux images
 - essayer de faire un beau questionBlock
+- Réparer la fonctionnalité "Play Again"
 
 Thien :
 
@@ -18,9 +19,6 @@ Thien :
 Kana :
 
 - Responsive : desktop version
-
-Kana :
-
 - Compter le score de l'utilisateur et afficher le total à la fin du jeu en utilisant JS 
 - Animation de la page de classement ; 
     -création d'un tableau d'affichage avec CSS 
