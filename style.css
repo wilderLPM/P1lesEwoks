@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #532884;
-  font-family: "François One", sans-serif;
+  font-family: "FranÃ§ois One", sans-serif;
 }
 
 h1 {
@@ -18,23 +18,23 @@ h1 {
   margin: 0;
 }
 
-.header_screen {
-  display: block;
-}
-
-.questions_screen {
-  display: none;
-}
-
-.result_screen {
-  display: none;
-}
-
 h2 {
   text-align: center;
   font-family: "Francois One", sans-serif;
   color: white;
   margin: 0;
+}
+
+.headerScreen {
+  display: block;
+}
+
+.questionsScreen {
+  display: none;
+}
+
+.resultScreen {
+  display: none;
 }
 
 #logo {
@@ -49,6 +49,10 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.avatar article{
+  cursor:pointer;
 }
 
 article {
@@ -66,20 +70,26 @@ article {
   margin: 0;
 }
 
-.button-start {
+.startSection{
+  display: flex;
   text-align: center;
+  justify-content: center;
+  margin-bottom: 3vh;
 }
-
-#btn_start {
+#btnStart {
   background-color: #05a67a;
   text-shadow: 0px -2px #05a67a;
   border-radius: 50%;
+  height: 50px;
 }
 
 input {
   margin-bottom: 8px;
   padding: 8px 14px;
-  background-color: #f28c11;
+  background-color: white;
+  font-family: "Francois One", sans-serif;
+  color: black;
+  margin-right: 1vh;
 }
 
 .avatar img {
@@ -88,49 +98,50 @@ input {
 
 /*------------------------CODE DE LEO-PAUL----------------------*/
 
-footer {
-  background-color: #f28c11;
-  color: white;
-  display: flex;
-  justify-content: center;
-}
-
-.question-header {
-  padding-left: 5%;
+#questionHeader {
   width: 100%;
   height: 10%;
   display: grid;
-  grid-template: 80% 20% / 30% 60%;
+  grid-template-columns: 0.5fr 1fr 1fr 0.4fr;
+  grid-template-rows: 10px 80px 30px 30px 10px;
+  grid-gap: 10px;
   align-items: center;
 }
 
-.question-header>* {
+.questionNumber {
+  color: white;
+  grid-row-start: 4;
+  grid-column: 2/4;
+  text-align: center;
+}
+
+.questionHeader>* {
   justify-self: center;
 }
 
-.questionheader>h3 {
-  grid-row: 1;
-  font-size: 2rem;
-}
-
-.question-header>.pseudo {
-  grid-row: 2;
-}
 
 .playerAvatar {
-  grid-column: 1;
-  grid-row: 1;
-  padding: 10%;
-  width: 80%;
+  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-column-end: 2;
+
+  width: 60%;
   background-color: #f28c11;
   border-radius: 50%;
   border-width: 1px;
   overflow: visible;
 }
 
-/*------CE QUI EST CI-DESSOUS EST DEJA MODIFIE -------*/
-.question-card,
-.card-buttons {
+#progress {
+  width: 100%;
+  height: 100%;
+  grid-row-start: 3;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.questionCard,
+.cardButtons {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -139,11 +150,11 @@ footer {
   color: white;
 }
 
-.question-img {
+.questionImg {
   width: 50%;
 }
 
-.question-text {
+.questionText {
   width: 70%;
   margin: 5% 10%;
   padding: 2% 5%;
@@ -172,6 +183,9 @@ main button {
   box-shadow: black 1px 1px 5px;
   cursor: pointer;
 }
+#envoyer{
+  color: black;
+}
 
 .true {
   background-color: #0aa67a;
@@ -181,37 +195,71 @@ main button {
   background-color: #f26444;
 }
 
-.suivant {
+#btnSuivant {
   margin: 5% auto;
-  display: block;
   background-color: #f28c11;
   width: 40%;
   font-size: 1.5rem;
+  display: none;
 }
 
-/*------CE QUI EST CI-DESSUS EST DEJA MODIFIE -------*/
 
 /* -----------Kana Ranking Page------------------ */
+#headerResult {
+  width: 100%;
+  height: 10%;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 0.4fr;
+  grid-template-rows: 10px 80px 30px 10px;
+  grid-gap: 10px;
+  align-items: center;
+}
 
-#scoreimg {
+.headerResult>* {
+  justify-self: center;
+}
+
+.headerResult>h3 {
+  grid-row: 2;
+}
+
+.pseudoResult {
+  color: white;
+  font-size: 2rem;
+  grid-row-start: 2;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  text-align: center;
+  font-family: "Francois One", sans-serif;
+}
+
+#progressBar {
+  width: 100%;
+  height: 100%;
+  grid-row-start: 3;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+#scoreImg { /* What is scoreImg ? */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
-#scoreimg>img {
+#scoreImg>img {
   width: 40%;
 }
 
 .score {
-  font-family: "Francois One", sans-serif;
   color: orange;
   text-align: center;
-  font-size: 60px;
+  font-size: 30px;
+  margin: 0;
 }
 
-#rankinglist {
+#rankingList {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -246,7 +294,7 @@ span {
   text-align: center;
 }
 
-.username {
+.userName {
   font-family: "Francois One", sans-serif;
   color: #532884;
   font-size: 30px;
@@ -256,7 +304,6 @@ span {
   font-family: "Francois One", sans-serif;
   color: #05a67a;
   font-size: 20px;
-
 }
 
 ol>li>img {
@@ -264,12 +311,14 @@ ol>li>img {
   height: 15%;
 }
 
-#playagain {
+#playAgain {
   font-family: "Francois One", sans-serif;
   text-decoration: none;
   width: 20vw;
   height: 5vh;
   background-color: orange;
+  margin-bottom: 10px;
+  transition: all 0.3s;
 }
 
 label {
@@ -278,23 +327,11 @@ label {
   margin: 0.5rem;
 }
 
-#playagain {
-  margin-bottom: 10px;
-  transition: all .3s;
-}
-
-
 /* does not working, check  later 
 #playagain :hover {
   box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
   border-color: transparent;
 } */
-
-input {
-  font-family: "Francois One", sans-serif;
-  color: black;
-
-}
 
 
 #comment {
@@ -306,13 +343,15 @@ footer {
   justify-content: center;
   align-items: center;
   font-family: "Francois One", sans-serif;
-  height: 10vh;
+  height: 8vh;
   background-color: #f28c11;
   color: white;
   font-size: 10px;
+  bottom: 0;
 }
 
-.star {
+/* Kana à modiifer  */
+/* .star {
   animation: kirakira 8s linear;
   color: yellow;
   display: inline-block;
@@ -331,4 +370,4 @@ footer {
   100% {
     transform: translateY(calc(100vh + 1em)) rotateY(3600deg);
   }
-}
+} */
