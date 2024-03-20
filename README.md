@@ -14,6 +14,13 @@ Thien :
 
 - Changer code JS transition entre questions
 
+Kana :
+
+- Compter le score de l'utilisateur et afficher le total à la fin du jeu en utilisant JS 
+- Animation de la page de classement ; 
+    -création d'un tableau d'affichage avec CSS 
+-   animation avec étoile en CSS et JS 
+
 
 -------IDEES----------
 
