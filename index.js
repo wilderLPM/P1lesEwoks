@@ -1,22 +1,23 @@
 let lastClickedAvatar = null;
 function configureAvatarButton(avatarButtons) {
-    for (let i = 0; i < avatarButtons.length; i++) {
-        avatarButtons[i].addEventListener("click", function (event) {
-            event.preventDefault();
-            // Réinitialise les styles du dernier bouton cliqué (s'il existe)
-            if (lastClickedAvatar) {
-                lastClickedAvatar.style.transform = "scale(1)";
-                lastClickedAvatar.style.backgroundColor = "";
-                lastClickedAvatar.style.borderRadius = "";
-            }
-            // Met à jour les styles du bouton actuel
-            this.style.transform = "scale(1.2)";
-            this.style.backgroundColor = "#f28c11";
-            this.style.borderRadius = "50%";
-            // Met à jour la référence du dernier bouton cliqué
-            lastClickedAvatar = this;
-        });
-    }
+  for (let i = 0; i < avatarButtons.length; i++) {
+    avatarButtons[i].addEventListener("click", function (event) {
+      event.preventDefault();
+      // Réinitialise les styles du dernier bouton cliqué (s'il existe)
+      if (lastClickedAvatar) {
+        lastClickedAvatar.style.transform = "scale(1)";
+        lastClickedAvatar.style.backgroundColor = "";
+        lastClickedAvatar.style.borderRadius = "";
+      }
+      // Met à jour les styles du bouton actuel
+      this.style.transform = "scale(1.2)";
+      this.style.backgroundColor = "#f28c11";
+      this.style.borderRadius = "50%";
+      // Met à jour la référence du dernier bouton cliqué
+      lastClickedAvatar = this;
+      activerFonctionClass();
+    });
+  }
 }
 configureAvatarButton(avatarButton1, 1);
 configureAvatarButton(avatarButton2, 2);
@@ -71,6 +72,7 @@ function activerFonctionClass() {
 function validerPseudo() {
     // Récupérer la valeur du pseudo
     let pseudo = document.getElementById("pseudo").value;
+
 
     // Vérifier si le pseudo est vide
     if (pseudo.trim() === "") {

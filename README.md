@@ -2,8 +2,7 @@
 
 Everyone :
 
-- écrire les réponses (questionCards:solution)
-
+- écrire les réponses (questionCards:answer)
 
 Léo-Paul :
 
@@ -16,16 +15,13 @@ Thien :
 
 - nettoyage de code
 
-
 Kana :
 
 - Responsive : desktop version
-- Animation de la page de classement ; 
-    -création d'un tableau d'affichage avec CSS 
-
+- Animation de la page de classement ;
+  -création d'un tableau d'affichage avec CSS
 
 -------IDEES SI ON A LE TEMPS----------
 
-- 
-- 
-
+-
+-

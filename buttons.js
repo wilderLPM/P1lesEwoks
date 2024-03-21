@@ -24,7 +24,7 @@ for (const button of vrai) {
 
 correctButton.addEventListener("click", () => {
   questionText.style.backgroundColor = "#0aa67a";
-  questionText.innerText = questionCards.solution;
+  questionText.innerText = questionCards[indexQuestionCourante - 1].answer;
   correctButton.disabled = true;
   incorrectButton.disabled = true;
 });
@@ -32,39 +32,9 @@ correctButton.addEventListener("click", () => {
 // WHEN USER CHOOSES INCORRECT ANSWER
 incorrectButton.addEventListener("click", () => {
   questionText.style.backgroundColor = "#F26444";
-  questionText.innerText = questionCards.solution;
+  questionText.innerText = questionCards[indexQuestionCourante - 1].answer;
   correctButton.disabled = true;
   incorrectButton.disabled = true;
-});
-
-// GRISE LE BOUTON INCORRECT QUAND USER CHOISIT UNE REPONSE
-for (i in faux) {
-  if (
-    buttons[i] instanceof HTMLButtonElement &&
-    (buttons[i].className === "true" || buttons[i].className === "false")
-  ) {
-    buttons[i].addEventListener("click", function () {
-      if (buttons[i].className === "true") {
-        incorrectButton[i].style.backgroundColor = "#0aa67ab5";
-      } else {
-        incorrectButton[i].style.backgroundColor = "#f2644492";
-      }
-    });
-  }
-}
-correctButton.addEventListener("click", () => {
-  questionText.style.backgroundColor = "#0aa67a";
-  correctButton.disabled = true;
-  incorrectButton.disabled = true;
-  questionText.textContent = questionCards[indexQuestionCourante - 1].solution;
-});
-
-// WHEN USER CHOOSES INCORRECT ANSWER
-incorrectButton.addEventListener("click", () => {
-  questionText.style.backgroundColor = "#F26444";
-  correctButton.disabled = true;
-  incorrectButton.disabled = true;
-  questionText.textContent = questionCards[indexQuestionCourante - 1].solution;
 });
 
 // GRISE LE BOUTON INCORRECT QUAND USER CHOISIT UNE REPONSE (à nettoyer)
@@ -108,3 +78,4 @@ userChoice.forEach(function (button) {
 
 });
  */
+console.log("coucou");

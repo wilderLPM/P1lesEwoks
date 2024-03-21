@@ -126,14 +126,14 @@ input {
   height: 10%;
   display: grid;
   grid-template-columns: 0.5fr 1fr 1fr 0.4fr;
-  grid-template-rows: 10px 80px 30px 30px 10px;
+  grid-template-rows: 80px 30px 30px 10px; /* removed 10px row 1 */
   grid-gap: 10px;
   align-items: center;
 }
 
 .questionNumber {
   color: white;
-  grid-row-start: 4;
+  grid-row-start: 3; /*  4 ? */
   grid-column: 2/4;
   text-align: center;
 }
@@ -144,7 +144,7 @@ input {
 
 
 .playerAvatar {
-  grid-row-start: 2;
+  grid-row-start: 0; /*  2 ? */
   grid-column-start: 2;
   grid-column-end: 2;
   padding: 10%;
@@ -155,15 +155,11 @@ input {
 }
 
 
-.playerAvatarResult {
-  width: 50%;
-  overflow: visible;
-}
 
 #progress {
   width: 100%;
   height: 100%;
-  grid-row-start: 3;
+  grid-row-start: 2; /*  3 ? */
   grid-column-start: 2;
   grid-column-end: 4;
 }
@@ -295,12 +291,6 @@ main button {
   font-family: "Francois One", sans-serif;
 }
 
-img.playerAvatar {
-  width: 30%;
-  height: 30%;
-  padding: 0;
-}
-
 #headerResult {
   display: flex;
   flex-direction: column;
@@ -319,7 +309,7 @@ img.playerAvatar {
 .pseudoResult {
   color: white;
   font-size: 2rem;
-  grid-row-start: 2;
+  grid-row-start: 1;
   grid-column-start: 3;
   grid-column-end: 4;
   text-align: center;
@@ -327,9 +317,9 @@ img.playerAvatar {
 }
 
 #progressBar {
-  width: 80%;
-  height: 80%;
-  grid-row-start: 3;
+  width: 100%;
+  height: 100%;
+  grid-row-start: 2;
   grid-column-start: 2;
   grid-column-end: 4;
 }
@@ -560,14 +550,16 @@ html {
     display: flex;
     flex-direction: row;
     margin: 3rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-right: 0;
   }
 
   .questionText {
-    width: 50%;
     margin: 0;
     font-size: 40px;
     font-family: "Francois One", sans-serif;
-    width: 20%;
+    width: 40%;
   }
 
   /* -----questionpage----- */
@@ -590,6 +582,7 @@ html {
   #btnSuivant {
     width: 15vw;
     height: 5vh;
+    margin: 2% auto;
   }
 
   /* ------Ranking page----- */
@@ -604,7 +597,7 @@ html {
   }
 
   .questionImg {
-    width: 30%;
+    width: 29%;
   }
 
   /* ------Ranking page----- */
@@ -664,7 +657,6 @@ html {
 
   #progressBar {
     width: 100%;
-    height: 200%;
   }
 
   #playAgain {

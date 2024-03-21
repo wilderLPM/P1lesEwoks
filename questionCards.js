@@ -4,7 +4,7 @@ const questionCards = [
     alt: "Le blason d'une ligue fictive de baseball, ornée de la tête de Kaleien",
     question: "Le match de baseball le plus long du monde à duré plus de 8h",
     answer:
-      "Le 14 juin 1966, les Marlins de Miami battent Cardinals de St. Petersburg en 6h59 !",
+      "Le 14 juin 1966, les Marlins de Miami battent les Cardinals de St. Petersburg en 6h59 !",
     vrai: "correct",
     faux: "incorrect",
   },
@@ -92,4 +92,3 @@ const questionCards = [
     faux: "incorrect",
   },
 ];
-
