@@ -4,39 +4,57 @@ function afficherQuestion(question) {
   questionImg.alt = question.alt;
   questionText.textContent = question.question;
 
+  // Remettre la couleur d'origine des boutons
+  trueButton.style.backgroundColor = "#0aa67a";
+  falseButton.style.backgroundColor = "#F26444";
+
   // Changer la classe des boutons en fonction de la question
   trueButton.classList.remove("correct", "incorrect");
-  trueButton.classList.add(question.vrai);
   falseButton.classList.remove("correct", "incorrect");
+  trueButton.classList.add(question.vrai);
   falseButton.classList.add(question.faux);
+
+  // Réactiver les boutons vrai/faux
   correctButton.disabled = false;
   incorrectButton.disabled = false;
-  console.log(correctButton);
-  correctButton.removeEventListener("click", countScore);
+
+  // On enlève les eventListener obsolètes pour éviter qu'ils se cumulent
+  incorrectButton.removeEventListener("click", clickIncorrect);
+  correctButton.removeEventListener("click", clickCorrect);
+
+  // On récupère les boutons vrai et faux selon leur nouvelle classe
+  incorrectButton = document.querySelector(".incorrect");
   correctButton = document.querySelector(".correct");
-  correctButton.addEventListener("click", countScore);
-  console.log(score);
+
+  // On réassigne les eventListener au bons bouttons
+  correctButton.addEventListener("click", clickCorrect);
+  incorrectButton.addEventListener("click", clickIncorrect);
+
+  // Changement de couleur du fond en vert si user répond juste
 }
 
 function questionSuivante() {
-  // Vérifier si nous avons atteint la fin du tableau
+  // Vérifier si nous avons atteint ou non la fin du tableau
   if (indexQuestionCourante < questionCards.length) {
     // Afficher la question suivante
     afficherQuestion(questionCards[indexQuestionCourante]);
 
     // Incrémenter la valeur de la barre de progression de 10
     progressBarValue += 10;
-    // CODE POUR AFFICHER LE NUMERO DE LA QUESTION ACTUELLE
-    questionNumber.innerHTML = `Question n°${progressBarValue / 10}`;
-    questionText.style.backgroundColor = "#f28c11"; // On remet le fond de la question en orange
 
     // Mettre à jour la valeur de la balise <meter>
     progressBar.value = progressBarValue;
-    // Kana - ca marche pas maintenant,il faut creer le class pour dernier button "suivant" -> Kana faire lundi
+
+    // Afficher le numéro de la question actuelle
+    questionNumber.innerHTML = `Question n°${progressBarValue / 10}`;
+    questionText.style.backgroundColor = "#f28c11"; // On remet le fond de la question en orange
+
+    // Mettre à jour le score sur la page ranking
     const scoreDisplay = document.getElementsByClassName("score")[0];
     scoreDisplay.innerText = `Your score : ${score}/10`;
   }
   if (indexQuestionCourante === questionCards.length - 1) {
+    // Si c'est la dernière question
     btnSuivant.innerText = "Résultats";
   } else if (indexQuestionCourante === questionCards.length) {
     // Si nous sommes arrivés à la fin du tableau, afficher la page ranking
@@ -76,13 +94,7 @@ function backHome() {
   footerScreen.style.display = "block";
   indexQuestionCourante = 0;
   progressBarValue = 0;
+  score = 0;
   btnSuivant.innerText = "Suivant";
 }
 playAgain.addEventListener("click", backHome);
-
-// Kana compter des scores de utiliseteur, il faut s'affichier sur chque page-> Je le fait dans la semaine prochaine.
-
-let score = 0;
-function countScore() {
-  score = score + 1;
-}

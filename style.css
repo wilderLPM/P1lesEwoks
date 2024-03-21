@@ -254,9 +254,6 @@ main button {
   justify-self: center;
 }
 
-.headerResult>h3 {
-  grid-row: 2;
-}
 
 .pseudoResult {
   color: white;

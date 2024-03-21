@@ -28,17 +28,14 @@ const btnSuivant = document.getElementById("btnSuivant"); // SUIVANT
 const playAgain = document.getElementById("playAgain"); // PLAY AGAIN
 
 let correctButton = document.querySelector(".correct"); // CORRECT
-const incorrectButton = document.querySelector(".incorrect"); // INCORRECT
+let incorrectButton = document.querySelector(".incorrect"); // INCORRECT
 const answerButton = document.getElementsByClassName("answerButton"); // VRAI et FAUX
 
 const trueButton = document.querySelector(".true"); // VRAI
 const falseButton = document.querySelector(".false"); // FAUX
 
-const vrai = Array.from(document.getElementsByClassName("true")); // Pas sûr que ce soit toujours utile VRAI
-const faux = Array.from(document.getElementsByClassName("false")); // FAUX
-const userChoice = vrai.concat(faux);
-
 //---------------- OTHER -----------------------
 
+let score = 0;
 let indexQuestionCourante = 0;
-let progressBarValue = 0; // Définition de la valeur à 0 pour le départ
+let progressBarValue = 0;
