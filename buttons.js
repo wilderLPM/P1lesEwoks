@@ -48,7 +48,10 @@ for (i in faux) {
         incorrectButtons[i].style.backgroundColor = "#0aa67ab5";
       } else {
         incorrectButtons[i].style.backgroundColor = "#f2644492";
-
+      }
+    });
+  }
+}
 correctButton.addEventListener("click", () => {
   questionText.style.backgroundColor = "#0aa67a";
   correctButton.disabled = true;
@@ -76,7 +79,6 @@ for (i in faux) {
         incorrectButton[i].style.backgroundColor = "#0aa67ab5";
       } else {
         incorrectButton[i].style.backgroundColor = "#f2644492";
-
       }
     });
   }
@@ -84,10 +86,9 @@ for (i in faux) {
 /* #f2644492 */ // QUAND FAUX EST INCORRECT
 /* #0aa67ab5  */ // QUAND VRAI EST INCORRECT
 
+/* userChoice.forEach(function (button) {
 
 userChoice.forEach(function (button) {
-
-/* userChoice.forEach(function (button) {
   button.addEventListener("click", function () {
     const parentDiv = button.parentElement; // Récupérez l'élément parent du bouton
     const incorrectButton = parentDiv.querySelector(".incorrect"); // Sélectionnez le bouton incorrect dans le même conteneur que le bouton cliqué

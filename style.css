@@ -465,7 +465,7 @@ bottom: 0;
   }
 }
 
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 920px){
 
   /* ------toppage-------- */
 
@@ -492,6 +492,7 @@ bottom: 0;
 
   #logo img {
     width: 15%;
+  }
   h1 {
     padding: 2rem;
   }
@@ -578,11 +579,8 @@ bottom: 0;
   }
 
   .pseudoResult {
-    font-size: 40px;
-  }
-
-
-    padding: 50px;
+    font-size: 40px; 
+    /* padding: 50px; padding sur pseudoResult ? */
   }
 
   .questionImg {
@@ -628,6 +626,7 @@ bottom: 0;
 
   #rankingList>label {
     font-size: 30px;
+  }
   #pseudoChange2 {
     font-size: 60px;
   }
