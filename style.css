@@ -155,6 +155,10 @@ input {
 }
 
 
+.playerAvatarResult {
+  width: 50%;
+  overflow: visible;
+}
 
 #progress {
   width: 100%;
@@ -289,6 +293,12 @@ main button {
   grid-column-end: 4;
   text-align: center;
   font-family: "Francois One", sans-serif;
+}
+
+img.playerAvatar {
+  width: 100%;
+  height: 100%;
+  padding: 0;
 }
 
 #headerResult {
@@ -564,8 +574,8 @@ html {
 
   /* -----questionpage----- */
   img.playerAvatar {
-    width: 20%;
-    height: 30%;
+    width: 100%;
+    height: 100%;
     padding: 0;
   }
 
@@ -657,6 +667,7 @@ html {
 
   #progressBar {
     width: 100%;
+    height: 100%;
   }
 
   #playAgain {
