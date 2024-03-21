@@ -33,6 +33,7 @@ function clickCorrect() {
   correctButton.disabled = true;
   incorrectButton.disabled = true;
   score++;
+  btnSuivant.disabled = false;
 }
 
 // WHEN USER CHOOSES INCORRECT ANSWER
@@ -42,6 +43,7 @@ function clickIncorrect() {
   questionText.innerText = questionCards[indexQuestionCourante - 1].answer;
   correctButton.disabled = true;
   incorrectButton.disabled = true;
+  btnSuivant.disabled = false;
 }
 
 // GRISE LE BOUTON INCORRECT QUAND USER CHOISIT UNE REPONSE (à nettoyer)

@@ -30,7 +30,8 @@ function afficherQuestion(question) {
   correctButton.addEventListener("click", clickCorrect);
   incorrectButton.addEventListener("click", clickIncorrect);
 
-  // Changement de couleur du fond en vert si user répond juste
+  // On disable le bouton suivant
+  btnSuivant.disabled = true;
 }
 
 function questionSuivante() {
