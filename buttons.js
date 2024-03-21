@@ -22,19 +22,19 @@ for (const button of vrai) {
 
 // WHEN USER CHOOSES CORRECT ANSWER
 
-correctButtons.addEventListener("click", () => {
+correctButton.addEventListener("click", () => {
   questionText.style.backgroundColor = "#0aa67a";
   questionText.innerText = questionCards.solution;
-  correctButtons.disabled = true;
-  incorrectButtons.disabled = true;
+  correctButton.disabled = true;
+  incorrectButton.disabled = true;
 });
 
 // WHEN USER CHOOSES INCORRECT ANSWER
-incorrectButtons.addEventListener("click", () => {
+incorrectButton.addEventListener("click", () => {
   questionText.style.backgroundColor = "#F26444";
   questionText.innerText = questionCards.solution;
-  correctButtons.disabled = true;
-  incorrectButtons.disabled = true;
+  correctButton.disabled = true;
+  incorrectButton.disabled = true;
 });
 
 // GRISE LE BOUTON INCORRECT QUAND USER CHOISIT UNE REPONSE
@@ -45,9 +45,9 @@ for (i in faux) {
   ) {
     buttons[i].addEventListener("click", function () {
       if (buttons[i].className === "true") {
-        incorrectButtons[i].style.backgroundColor = "#0aa67ab5";
+        incorrectButton[i].style.backgroundColor = "#0aa67ab5";
       } else {
-        incorrectButtons[i].style.backgroundColor = "#f2644492";
+        incorrectButton[i].style.backgroundColor = "#f2644492";
       }
     });
   }

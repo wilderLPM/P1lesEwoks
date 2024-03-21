@@ -24,29 +24,29 @@ configureAvatarButton(avatarButton3, 3);
 configureAvatarButton(avatarButton4, 4);
 
 function createAvatar10() {
-  let avatar10 = document.createElement('img');
-  avatar10.classList.add('playerAvatar');
+  let avatar10 = document.createElement("img");
+  avatar10.classList.add("playerAvatar");
   avatar10.src = "images/avatar1.svg";
   questionHeader.appendChild(avatar10);
 }
 
 function createAvatar20() {
-  let avatar20 = document.createElement('img');
-  avatar20.classList.add('playerAvatar');
+  let avatar20 = document.createElement("img");
+  avatar20.classList.add("playerAvatar");
   avatar20.src = "images/avatar2.svg";
   questionHeader.appendChild(avatar20);
 }
 
 function createAvatar30() {
-  let avatar30 = document.createElement('img');
-  avatar30.classList.add('playerAvatar');
+  let avatar30 = document.createElement("img");
+  avatar30.classList.add("playerAvatar");
   avatar30.src = "images/avatar3.svg";
   questionHeader.appendChild(avatar30);
 }
 
 function createAvatar40() {
-  let avatar40 = document.createElement('img');
-  avatar40.classList.add('playerAvatar');
+  let avatar40 = document.createElement("img");
+  avatar40.classList.add("playerAvatar");
   avatar40.src = "images/avatar4.svg";
   questionHeader.appendChild(avatar40);
 }
@@ -108,13 +108,11 @@ for (let i = 0; i < changeColorRanking.length; i++) {
       return (this.style.color = "grey"); // maintenant tu peut colorer en gris le bouton sur lequel tu qs cliquer
     }
   });
-
 }
 
 // ----------------------Function star  (WIP) Kana------------------
 //Star maker
 function starMaker(n) {
-
   // creation d4un element <div class="star">★</div>
   var star = document.createElement("div");
   star.className = "star";
@@ -154,29 +152,29 @@ starMaker(30);
 
 //---------------------------------------------PSEUDO FORM --------------------------------------------------------------------------
 document
-    .getElementById("nameForm")
-    .addEventListener("submit", function (event) {
-        event.preventDefault(); // Empêche le rechargement de la page
+  .getElementById("nameForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // Empêche le rechargement de la page
 
-        let name = document.getElementById("nameInput").value;
-        let pseudoChange = document.getElementById("pseudoChange").value; // Récupération de la valeur du deuxième mot
-        let pseudoChange2 = document.getElementById("pseudoChange2").value; // Récupération de la valeur du troisième mot
+    let name = document.getElementById("nameInput").value;
+    let pseudoChange = document.getElementById("pseudoChange").value; // Récupération de la valeur du deuxième mot
+    let pseudoChange2 = document.getElementById("pseudoChange2").value; // Récupération de la valeur du troisième mot
 
-        // Vérification si le champ du pseudo est vide
-        if (name.trim() === "") {
-            alert("Mets un Pseudo on t'a dit !");
-            return; // Arrête l'exécution de la fonction
-        }
+    // Vérification si le champ du pseudo est vide
+    if (name.trim() === "") {
+      alert("Mets un Pseudo on t'a dit !");
+      return; // Arrête l'exécution de la fonction
+    }
 
-        let replacedText = "Salut [NOM] ! Prêt à jouer ? Appuie sur Start !"; // Texte à remplacer
+    let replacedText = "Salut [NOM] ! Prêt à jouer ? Appuie sur Start !"; // Texte à remplacer
 
-        // Remplacement du premier mot
-        let updatedText = replacedText.replace("[NOM]", name);
-        // Remplacement du deuxième mot
-        updatedText = updatedText.replace("[AUTRE_MOT]", pseudoChange);
-        updatedText = updatedText.replace("[pseudoChange2]", pseudoChange2);
+    // Remplacement du premier mot
+    let updatedText = replacedText.replace("[NOM]", name);
+    // Remplacement du deuxième mot
+    updatedText = updatedText.replace("[AUTRE_MOT]", pseudoChange);
+    updatedText = updatedText.replace("[pseudoChange2]", pseudoChange2);
 
-        document.getElementById("output").innerText = updatedText;
-        document.getElementById("pseudoChange").innerText = name;
-        document.getElementById("pseudoChange2").innerText = name;
-    });
+    document.getElementById("output").innerText = updatedText;
+    document.getElementById("pseudoChange").innerText = name;
+    document.getElementById("pseudoChange2").innerText = name;
+  });
