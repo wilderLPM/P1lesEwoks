@@ -1,13 +1,3 @@
-
-const correctButtons = document.querySelector(".correct");
-const incorrectButtons = document.querySelector(".incorrect");
-const buttons = document.getElementsByClassName("answerButton");
-
-const vrai = Array.from(document.getElementsByClassName("true")); // Pas sûr que ce soit toujours utile
-const faux = Array.from(document.getElementsByClassName("false"));
-const userChoice = vrai.concat(faux);
-
-
 // MET EN EVIDENCE LE BOUTON QUAND ON LE SURVOLE
 for (const button of faux) {
   if (button instanceof HTMLButtonElement && !button.disabled) {
