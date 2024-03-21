@@ -15,7 +15,7 @@ function configureAvatarButton(avatarButtons) {
       this.style.borderRadius = "50%";
       // Met à jour la référence du dernier bouton cliqué
       lastClickedAvatar = this;
-      console.log(lastClickedAvatar)
+      activerFonctionClass();
     });
   }
 }

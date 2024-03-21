@@ -1,5 +1,4 @@
 //---------------- AVATAR -----------------------
-
 let avatarButton1 = document.getElementsByClassName("avatar1");
 let avatarButton2 = document.getElementsByClassName("avatar2");
 let avatarButton3 = document.getElementsByClassName("avatar3");
