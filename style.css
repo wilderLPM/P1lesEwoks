@@ -9,6 +9,7 @@ body {
   padding: 0;
   background-color: #532884;
   font-family: "FranÃ§ois One", sans-serif;
+  height: 100%;
 }
 
 h1 {
@@ -41,8 +42,12 @@ h2 {
   text-align: center;
 }
 
+#logo img {
+  width:30%;
+}
+
 .container {
-  padding: 5px;
+  padding: 20px;
 }
 
 .avatar {
@@ -70,17 +75,18 @@ article {
   margin: 0;
 }
 
-.startSection{
+.startSection {
   display: flex;
   text-align: center;
   justify-content: center;
-  margin-bottom: 3vh;
+  margin-bottom: 5rem;
 }
+
 #btnStart {
   background-color: #05a67a;
   text-shadow: 0px -2px #05a67a;
-  border-radius: 50%;
-  height: 50px;
+  border-radius: 90%;
+  height: 40px;
 }
 
 input {
@@ -124,20 +130,30 @@ input {
   grid-row-start: 2;
   grid-column-start: 2;
   grid-column-end: 2;
-
-  width: 60%;
-  background-color: #f28c11;
-  border-radius: 50%;
+  padding: 10%;
+  width: 80%;
   border-width: 1px;
   overflow: visible;
 }
 
-#progress {
+.playerAvatarResult {
+  width: 50%;
+  overflow: visible;
+}
+
+#progressBar {
   width: 100%;
   height: 100%;
   grid-row-start: 3;
   grid-column-start: 2;
   grid-column-end: 4;
+}
+
+meter::-webkit-meter-optimum-value {
+  background: #05a67a;
+}
+meter::-moz-meter-bar { /* Firefox Pseudo Class */
+  background: #05a67a;
 }
 
 .questionCard,
@@ -155,15 +171,27 @@ input {
 }
 
 .questionText {
-  width: 70%;
+  width: 100%;
   margin: 5% 10%;
   padding: 2% 5%;
   text-align: center;
   background-color: #f28c11;
   border: none;
-  line-height: 25px;
+  line-height: 1;
   box-shadow: black 1px 1px 5px;
-  font-size: 1.2rem;
+  font-size: 16px;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.questionBlock{
+  height: 100px; /* Set the fixed height of the container */
+  overflow: hidden; /* Hide any overflow text */
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
 }
 
 .true,
@@ -183,6 +211,7 @@ main button {
   box-shadow: black 1px 1px 5px;
   cursor: pointer;
 }
+
 #envoyer{
   color: black;
 }
@@ -205,16 +234,6 @@ main button {
 
 
 /* -----------Kana Ranking Page------------------ */
-#headerResult {
-  width: 100%;
-  height: 10%;
-  display: grid;
-  grid-template-columns: 0.5fr 1fr 1fr 0.4fr;
-  grid-template-rows: 10px 80px 30px 10px;
-  grid-gap: 10px;
-  align-items: center;
-}
-
 .headerResult>* {
   justify-self: center;
 }
@@ -233,15 +252,34 @@ main button {
   font-family: "Francois One", sans-serif;
 }
 
-#progressBar {
-  width: 100%;
-  height: 100%;
-  grid-row-start: 3;
-  grid-column-start: 2;
-  grid-column-end: 4;
+#headerResult {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* width: 100%;
+  height: 10%;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 0.4fr;
+  grid-template-rows: 10px 80px 30px 10px;
+  grid-gap: 10px;
+  align-items: center; */
 }
 
-#scoreImg { /* What is scoreImg ? */
+.pseudoResult {
+  color: white;
+  font-size: 2rem;
+  grid-row-start: 2;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  text-align: center;
+  font-family: "Francois One", sans-serif;
+}
+
+
+#scoreImg {
+  /* What is scoreImg ? */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -263,7 +301,6 @@ main button {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-around;
   align-items: center;
 }
 
@@ -338,20 +375,26 @@ label {
   background-color: white;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Francois One", sans-serif;
-  height: 8vh;
-  background-color: #f28c11;
-  color: white;
-  font-size: 10px;
-  bottom: 0;
+html {
+  position: relative;
+  height: 100%;
 }
 
-/* Kana à modiifer  */
-/* .star {
+#homepage {
+  height: 100%;
+}
+#footerScreen {
+  text-align: center;
+  font-family: "Francois One", sans-serif;
+  height: 8%;
+  background-color: #f28c11;
+  color: white;
+  position: absolute;
+    width: 100%;
+bottom: 0;
+}
+
+.star {
   animation: kirakira 8s linear;
   color: yellow;
   display: inline-block;
@@ -370,4 +413,170 @@ footer {
   100% {
     transform: translateY(calc(100vh + 1em)) rotateY(3600deg);
   }
-} */
+}
+
+@media screen and (min-width: 920px) {
+
+  /* ------toppage-------- */
+
+  /*h1 {
+    font-size: 80px;
+  }*/
+
+  #nameInput {
+    width: 15vw;
+    height: 5vh;
+  }
+
+  #envoyer {
+    /*width: 6vw;
+    height: 3vh;*/
+    font-size: 1rem;
+  }
+
+  #btnStart {
+    height: 6vh;
+
+  }
+
+  #logo img {
+    width: 15%;
+  }
+
+  .container {
+    padding: none;
+  }
+
+  article {
+    width: 15%;
+  }
+
+  .avatar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .playerAvatar {
+    height: 100%;
+    padding: 0;
+    width: 100%;
+  }
+
+  footer>p {
+    font-size: 1rem;
+  }
+
+  /* -----questionpage----- */
+
+  .questionNumber {
+    margin: 0;
+    font-size: 30px;
+  }
+
+
+  .questionHeader>img {
+    width: 20%;
+    height: auto;
+  }
+
+
+  .questionCard {
+    display: flex;
+    flex-direction: row;
+    margin: 3rem;
+  }
+
+  .questionText {
+    width: 50%;
+    margin: 0;
+    font-size: 40px;
+    font-family: "FranÃ§ois One", sans-serif;
+  }
+
+  #headerResult {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .questionImg {
+    width: 20%;
+  }
+
+
+  #btnSuivant {
+    width: 15vw;
+    height: 5vh;
+  }
+
+  /* ------Ranking page----- */
+
+  #headerResult>img {
+    width: 10%;
+  }
+
+  .pseudoResult {
+    font-size: 40px;
+  }
+
+  .avatar {
+    align-items: center;
+  }
+
+  .score {
+    font-size: 70px;
+  }
+
+
+  #pseudoChange2 {
+    font-size: 50px;
+  }
+
+  ol {
+    width: 90vw;
+    height: 35vh;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  ol>li>img {
+    width: 20%;
+    height: auto;
+  }
+
+
+  #playAgain {
+    width: 200px;
+    height: 100%;
+    font-size: 2rem;
+    border-radius:10px;
+    white-space: nowrap;
+    color:white;
+  }
+
+  #rankingList>label {
+    font-size: 30px;
+  }
+
+  #comment {
+    width: 500px;
+    height: 70px;
+
+  }
+}
+
+
+/* TOP page 
+- footer text vertically center -- OK
+- il y a trop des espace en bas 
+- taille de container pseudo
+Q page 
+- possiton de avator 
+- trop des espace en bas
+- taille de boutton suivant 
+- taille de text suivant 
+Last page 
+- trop de espace 
+- taille de button play again 
+- taile de image  */
