@@ -1,5 +1,3 @@
-//--------------CODE DE THIEN-----------------
-
 let lastClickedAvatar = null;
 function configureAvatarButton(avatarButtons) {
   for (let i = 0; i < avatarButtons.length; i++) {
@@ -65,11 +63,13 @@ for (let i = 0; i < changeColorRanking.length; i++) {
       return (this.style.color = "grey"); // maintenant tu peut colorer en gris le bouton sur lequel tu qs cliquer
     }
   });
+
 }
 
 // ----------------------Function star  (WIP) Kana------------------
 //Star maker
 function starMaker(n) {
+
   // creation d4un element <div class="star">★</div>
   var star = document.createElement("div");
   star.className = "star";
