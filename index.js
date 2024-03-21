@@ -92,7 +92,7 @@ function validerPseudo() {
 for (let i = 0; i < changeColorRanking.length; i++) {
   changeColorRanking[i].addEventListener("click", function () {
     if (this.style.color === "grey") {
-      // si le bouton sur lequel tu cliaue est gris
+      // si le bouton sur lequel tu clique est gris
       this.style.color = "white"; // theoriquement il ne peut y avoir qu4un seul bouton gris donc pas besoin den chercher d4autre
       return; // on rend le bouton blanc et on stop la fonction avec return
     }
