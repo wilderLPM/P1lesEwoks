@@ -1,22 +1,31 @@
 # P1lesEwoks
 
-To Do :
+Everyone :
+
+- écrire les réponses (questionCards:solution)
+
 
 Léo-Paul :
 
-- refaire fonctions JS pour que tout se mette au bon endroit
-- CSS questionCards
-- refaire JS des bouttons
+- disable boutton "Suivant" tant que user n'a pas répondu
 - rajouter des alts aux images
-- coder le remplacement de la question par la réponse
+- essayer de faire un beau questionBlock
+- Réparer la fonctionnalité "Play Again" pour le footer
 
 Thien :
 
-- Changer code JS transition entre questions
+- nettoyage de code
 
 
--------IDEES----------
+Kana :
 
-- créer une image "work in progress" que l'on mettra à toutes les futurs questions que l'on va ajouter;
--
+- Responsive : desktop version
+- Animation de la page de classement ; 
+    -création d'un tableau d'affichage avec CSS 
+
+
+-------IDEES SI ON A LE TEMPS----------
+
+- 
+- 
 

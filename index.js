@@ -76,22 +76,22 @@ for (i in faux) {
 /* #f2644492 */ // QUAND FAUX EST INCORRECT
 /* #0aa67ab5  */ // QUAND VRAI EST INCORRECT
 
-userChoice.forEach(function (button) {
-    button.addEventListener("click", function () {
-        const parentDiv = button.parentElement; // Récupérez l'élément parent du bouton
-        const incorrectButton = parentDiv.querySelector(".incorrect"); // Sélectionnez le bouton incorrect dans le même conteneur que le bouton cliqué
-        const correctButton = parentDiv.querySelector(".correct");
-        if (incorrectButton.classList.contains("true")) {
-            // Vérifiez si le bouton incorrect a la classe "vrai"
-            incorrectButton.style.backgroundColor = "#0aa67ab5"; // Modifiez la couleur de fond du bouton incorrect
-            correctButton.style.backgroundColor = "#ff7556";
-        } else {
-            // Si le bouton incorrect a la classe "faux"
-            incorrectButton.style.backgroundColor = "#f2644492"; // Modifiez la couleur de fond du bouton incorrect
-            correctButton.style.backgroundColor = "#12c794";
-        }
-    });
-});
+// userChoice.forEach(function (button) {
+//     button.addEventListener("click", function () {
+//         const parentDiv = button.parentElement; // Récupérez l'élément parent du bouton
+//         const incorrectButton = parentDiv.querySelector(".incorrect"); // Sélectionnez le bouton incorrect dans le même conteneur que le bouton cliqué
+//         const correctButton = parentDiv.querySelector(".correct");
+//         if (incorrectButton?.classList.contains("true")) {
+//             // Vérifiez si le bouton incorrect a la classe "vrai"
+//             incorrectButton.style.backgroundColor = "#0aa67ab5"; // Modifiez la couleur de fond du bouton incorrect
+//             correctButton.style.backgroundColor = "#ff7556";
+//         } else {
+//             // Si le bouton incorrect a la classe "faux"
+//             incorrectButton?.style.backgroundColor = "#f2644492"; // Modifiez la couleur de fond du bouton incorrect
+//             correctButton.style.backgroundColor = "#12c794";
+//         }
+//     });
+// });
 
 //--------------CODE DE THIEN-----------------
 
@@ -113,7 +113,7 @@ function startResult() {
     result_screen.style.display = "block";
 }
 let btn_next10 = document.getElementById("btn_next10"); // A Modifier
-btn_next10.addEventListener("click", startResult);
+btn_next10?.addEventListener("click", startResult);
 // ------------- PLAY AGAIN ----------------
 
 function backHome() {
@@ -242,6 +242,15 @@ const changeColorRanking = document.getElementsByTagName("li");
 
 for (let i = 0; i < changeColorRanking.length; i++) {
     changeColorRanking[i].addEventListener('click', function () {
+        // si le bouton sur lequel tu cliaue est gris
+        // theoriquement il ne peut y avoir qu4un seul bouton gris donc pas besoin den chercher d4autre
+        // on rend le bouton blanc et on stop la fonction avec return 
+
+        // si le bouton sur lequel tu clique est blanc
+        // il faut trouver dans la liste des bouton lequel est gris pour le ;ettre en blanc
+        // boucle for sur changeColorRanking si gris alors devient blanc
+        // une fois laboucle fini normalement tout les bouton son blanc
+        // maintenant tu peut colorer en gris le bouton sur lequel tu qs cliquer  
         if (this.style.backgroundColor === '') {
             this.style.backgroundColor = 'grey';
         }
@@ -254,6 +263,7 @@ for (let i = 0; i < changeColorRanking.length; i++) {
 // ----------------------Function star  (WIP) Kana------------------
 //Star maker
 function starMaker(n) {
+    // creation d4un element <div class="star">★</div>
     var star = document.createElement("div");
     star.className = "star";
     star.textContent = "★";
@@ -262,29 +272,31 @@ function starMaker(n) {
     }
 }
 
+// // Kana a modifier 
 //Setting start
-function starSet(clone) {
-    var starClone = clone.cloneNode(true);
-    var starStyle = starClone.style;
+// function starSet(clone) {
+//     // creation d4un clone de l3element star
+//     var starClone = clone.cloneNode(true);
+//     var starStyle = starClone.style;
 
-    //Star position（left）,（animation-delay）、size（font-size）random decision 
-    starStyle.left = 100 * Math.random() + "%";
-    starStyle.animationDelay = 8 * Math.random() + "s";
-    starStyle.fontSize = ~~(50 * Math.random() + 20) + "px";
-    document.body.appendChild(starClone);
+//     // Star position（left）,（animation-delay）、size（font-size）random decision 
+//     starStyle.left = 100 * Math.random() + "%";
+//     starStyle.animationDelay = 8 * Math.random() + "s";
+//     starStyle.fontSize = ~~(50 * Math.random() + 20) + "px";
+//     document.body.appendChild(starClone);
 
-    //create new starts when it ends 
-    starClone.addEventListener("animationend", function () {
-        this.parentNode.removeChild(this);
-        var star = document.createElement("div");
-        star.className = "star";
-        star.textContent = "★";
-        starSet(star);
-    }, false)
-}
+//     // create new starts when it ends  il y a une animation dans le css, quand elle se fini ca supprime l4etoile et la recrer pour que lanimation recommece
+//     starClone.addEventListener("animationend", function () {
+//         starClone.parentNode.removeChild(starClone);
+//         var star = document.createElement("div");
+//         star.className = "star";
+//         star.textContent = "★";
+//         starSet(star);
+//     }, false)
+// }
 
-//50 stars 
-/* starMaker(50) */
+// //50 stars 
+// starMaker(30)
 
 // CODE POUR AFFICHER LE NUMERO DE LA QUESTION ACTUELLE
 let questionNumber = document.getElementsByClassName("question-number")[0];

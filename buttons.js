@@ -1,3 +1,4 @@
+
 const correctButtons = document.querySelector(".correct");
 const incorrectButtons = document.querySelector(".incorrect");
 const buttons = document.getElementsByClassName("answerButton");
@@ -5,6 +6,7 @@ const buttons = document.getElementsByClassName("answerButton");
 const vrai = Array.from(document.getElementsByClassName("true")); // Pas sûr que ce soit toujours utile
 const faux = Array.from(document.getElementsByClassName("false"));
 const userChoice = vrai.concat(faux);
+
 
 // MET EN EVIDENCE LE BOUTON QUAND ON LE SURVOLE
 for (const button of faux) {
@@ -29,6 +31,7 @@ for (const button of vrai) {
 }
 
 // WHEN USER CHOOSES CORRECT ANSWER
+
 correctButtons.addEventListener("click", () => {
   questionText.style.backgroundColor = "#0aa67a";
   questionText.innerText = questionCards.solution;
@@ -55,6 +58,35 @@ for (i in faux) {
         incorrectButtons[i].style.backgroundColor = "#0aa67ab5";
       } else {
         incorrectButtons[i].style.backgroundColor = "#f2644492";
+
+correctButton.addEventListener("click", () => {
+  questionText.style.backgroundColor = "#0aa67a";
+  correctButton.disabled = true;
+  incorrectButton.disabled = true;
+  questionText.textContent = questionCards[indexQuestionCourante - 1].solution;
+});
+
+// WHEN USER CHOOSES INCORRECT ANSWER
+incorrectButton.addEventListener("click", () => {
+  questionText.style.backgroundColor = "#F26444";
+  correctButton.disabled = true;
+  incorrectButton.disabled = true;
+  questionText.textContent = questionCards[indexQuestionCourante - 1].solution;
+});
+
+// GRISE LE BOUTON INCORRECT QUAND USER CHOISIT UNE REPONSE (à nettoyer)
+for (i in faux) {
+  if (
+    answerButton[i] instanceof HTMLButtonElement &&
+    (answerButton[i].className === "true" ||
+      answerButton[i].className === "false")
+  ) {
+    answerButton[i].addEventListener("click", function () {
+      if (answerButton[i].className === "true") {
+        incorrectButton[i].style.backgroundColor = "#0aa67ab5";
+      } else {
+        incorrectButton[i].style.backgroundColor = "#f2644492";
+
       }
     });
   }
@@ -62,7 +94,10 @@ for (i in faux) {
 /* #f2644492 */ // QUAND FAUX EST INCORRECT
 /* #0aa67ab5  */ // QUAND VRAI EST INCORRECT
 
+
 userChoice.forEach(function (button) {
+
+/* userChoice.forEach(function (button) {
   button.addEventListener("click", function () {
     const parentDiv = button.parentElement; // Récupérez l'élément parent du bouton
     const incorrectButton = parentDiv.querySelector(".incorrect"); // Sélectionnez le bouton incorrect dans le même conteneur que le bouton cliqué
@@ -77,4 +112,8 @@ userChoice.forEach(function (button) {
       correctButton.style.backgroundColor = "#12c794";
     }
   });
+
 });
+
+});
+ */
