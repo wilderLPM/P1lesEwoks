@@ -9,6 +9,7 @@ body {
   padding: 0;
   background-color: #532884;
   font-family: "FranÃ§ois One", sans-serif;
+  height: 100%;
 }
 
 h1 {
@@ -23,6 +24,7 @@ h2 {
   font-family: "Francois One", sans-serif;
   color: white;
   margin: 0;
+
 }
 
 .headerScreen {
@@ -41,14 +43,35 @@ h2 {
   text-align: center;
 }
 
+.headerScreen {
+  display: block;
+}
+
+.questionsScreen {
+  display: none;
+}
+
+.resultScreen {
+  display: none;
+
+}
+
+#logo img {
+  width:30%;
+}
+
 .container {
-  padding: 5px;
+  padding: 20px;
 }
 
 .avatar {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.avatar article{
+  cursor:pointer;
 }
 
 article {
@@ -70,12 +93,15 @@ article {
   display: flex;
   text-align: center;
   justify-content: center;
+  margin-bottom: 5rem;
   margin-bottom: 3vh;
 }
 
 #btnStart {
   background-color: #05a67a;
   text-shadow: 0px -2px #05a67a;
+  border-radius: 90%;
+  height: 40px;
   border-radius: 50%;
   height: 50px;
 }
@@ -95,19 +121,21 @@ input {
 
 /*------------------------CODE DE LEO-PAUL----------------------*/
 
-.questionHeader {
+#questionHeader {
   width: 100%;
   height: 10%;
   display: grid;
   grid-template-columns: 0.5fr 1fr 1fr 0.4fr;
-  grid-template-rows: 10px 80px 30px 10px;
+  grid-template-rows: 10px 80px 30px 30px 10px;
   grid-gap: 10px;
   align-items: center;
 }
 
 .questionNumber {
   color: white;
-  grid-column: 3;
+  grid-row-start: 4;
+  grid-column: 2/4;
+  text-align: center;
 }
 
 .questionHeader>* {
@@ -126,12 +154,26 @@ input {
   overflow: visible;
 }
 
+
+.playerAvatarResult {
+  width: 50%;
+  overflow: visible;
+}
+
 #progress {
   width: 100%;
   height: 100%;
   grid-row-start: 3;
   grid-column-start: 2;
   grid-column-end: 4;
+}
+
+
+meter::-webkit-meter-optimum-value {
+  background: #05a67a;
+}
+meter::-moz-meter-bar { /* Firefox Pseudo Class */
+  background: #05a67a;
 }
 
 .questionCard,
@@ -149,7 +191,7 @@ input {
 }
 
 .questionText {
-  width: 70%;
+  width: 100%;
   margin: 5% 10%;
   padding: 2% 5%;
   text-align: center;
@@ -158,7 +200,8 @@ input {
   line-height: 1;
   box-shadow: black 1px 1px 5px;
   font-size: 16px;
-  height: 15vh;
+  height: 100%;
+  border-radius: 8px;
 }
 .questionBlock{
   height: 100px; /* Set the fixed height of the container */
@@ -194,6 +237,10 @@ main button {
   color: black;
 }
 
+#envoyer{
+  color: black;
+}
+
 .true {
   background-color: #0aa67a;
 }
@@ -212,6 +259,7 @@ main button {
 
 
 /* -----------Kana Ranking Page------------------ */
+
 #headerResult {
   width: 100%;
   height: 10%;
@@ -278,6 +326,7 @@ img.playerAvatar {
   grid-column-start: 2;
   grid-column-end: 4;
 }
+
 
 #scoreImg {
   /* What is scoreImg ? */
@@ -376,16 +425,23 @@ label {
   background-color: white;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+html {
+  position: relative;
+  height: 100%;
+}
+
+#homepage {
+  height: 100%;
+}
+#footerScreen {
+  text-align: center;
   font-family: "Francois One", sans-serif;
-  height: 8vh;
+  height: 8%;
   background-color: #f28c11;
   color: white;
-  font-size: 10px;
-  bottom: 0;
+  position: absolute;
+    width: 100%;
+bottom: 0;
 }
 
 .star {
@@ -412,6 +468,30 @@ footer {
 @media screen and (min-width: 920px) {
 
   /* ------toppage-------- */
+
+
+  /*h1 {
+    font-size: 80px;
+  }*/
+
+  #nameInput {
+    width: 15vw;
+    height: 5vh;
+  }
+
+  #envoyer {
+    /*width: 6vw;
+    height: 3vh;*/
+    font-size: 1rem;
+  }
+
+  #btnStart {
+    height: 6vh;
+
+  }
+
+  #logo img {
+    width: 15%;
   h1 {
     padding: 2rem;
   }
@@ -421,6 +501,51 @@ footer {
   }
 
   article {
+
+    width: 15%;
+  }
+
+  .avatar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .playerAvatar {
+    height: 100%;
+    padding: 0;
+    width: 100%;
+  }
+
+  footer>p {
+    font-size: 1rem;
+  }
+
+  /* -----questionpage----- */
+
+  .questionNumber {
+    margin: 0;
+    font-size: 30px;
+  }
+
+
+  .questionHeader>img {
+    width: 20%;
+    height: auto;
+  }
+
+
+  .questionCard {
+    display: flex;
+    flex-direction: row;
+    margin: 3rem;
+  }
+
+  .questionText {
+    width: 50%;
+    margin: 0;
+    font-size: 40px;
+    font-family: "FranÃ§ois One", sans-serif;
     width: 20%;
   }
 
@@ -434,6 +559,29 @@ footer {
   #headerResult {
     flex-direction: row;
     justify-content: space-around;
+  }
+
+  .questionImg {
+    width: 20%;
+  }
+
+
+  #btnSuivant {
+    width: 15vw;
+    height: 5vh;
+  }
+
+  /* ------Ranking page----- */
+
+  #headerResult>img {
+    width: 10%;
+  }
+
+  .pseudoResult {
+    font-size: 40px;
+  }
+
+
     padding: 50px;
   }
 
@@ -450,6 +598,36 @@ footer {
     font-size: 70px;
   }
 
+
+  #pseudoChange2 {
+    font-size: 50px;
+  }
+
+  ol {
+    width: 90vw;
+    height: 35vh;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  ol>li>img {
+    width: 20%;
+    height: auto;
+  }
+
+
+  #playAgain {
+    width: 200px;
+    height: 100%;
+    font-size: 2rem;
+    border-radius:10px;
+    white-space: nowrap;
+    color:white;
+  }
+
+  #rankingList>label {
+    font-size: 30px;
   #pseudoChange2 {
     font-size: 60px;
   }
@@ -481,7 +659,23 @@ footer {
 
   #comment {
     width: 500px;
-    height: 80px;
+
+    height: 70px;
 
   }
 }
+
+
+/* TOP page 
+- footer text vertically center -- OK
+- il y a trop des espace en bas 
+- taille de container pseudo
+Q page 
+- possiton de avator 
+- trop des espace en bas
+- taille de boutton suivant 
+- taille de text suivant 
+Last page 
+- trop de espace 
+- taille de button play again 
+
