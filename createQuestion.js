@@ -1,42 +1,88 @@
-function createQuestion(card) {
-    // On récupère le parent dans lequel toutes nos question cards vont aller
-    let questionScreen = document.getElementsByClassName("questions_screen")[0];
+function afficherQuestion(question) {
+  // Remplir les éléments HTML avec les données de la question actuelle
+  questionImg.src = question.img;
+  questionImg.alt = question.alt;
+  questionText.textContent = question.question;
 
-    // On crée la div "question-card" pour y insérer <img/> et <p></p> qu'on va créer !
-    let questionCard = document.createElement("div");
-    questionCard.classList.add("question-card");
-
-    // On crée la div "card-buttons" pour y insérer les bouttons vrai/faux que l'on va créer !
-    let cardButtons = document.createElement("div");
-    cardButtons.classList.add("card-buttons");
-
-    let questionImg = document.createElement("img"); // On crée une balise <img/> virtuelle
-    questionImg.classList.add("question-img") // On lui donne la classe "question-img"
-    questionCard.appendChild(questionImg); // On met la balise <img/> créée, en enfant du div "question-card"
-    questionImg.setAttribute("src", card.img)
-
-    let questionText = document.createElement("p");
-    questionText.classList.add("question-text");
-    questionText.innerText = card.question;
-    questionCard.appendChild(questionText); // Deuxième enfant de questionCard
-
-    let buttonTrue = document.createElement("button");
-    buttonTrue.innerText = "VRAI";
-    buttonTrue.classList.add("true", "answer-button", card.vrai);  // On donne au boutton la classe 
-    // correct/incorrect en fonction de la question
-    cardButtons.appendChild(buttonTrue); // On met la balise <button> créée, en enfant du div "cardButtons"
-
-    let buttonFalse = document.createElement("button");
-    buttonFalse.innerText = "FAUX";
-    buttonFalse.classList.add("false", "answer-button", card.faux);
-    cardButtons.appendChild(buttonFalse); // Deuxième enfant de cardButtons
-
-    questionCard.appendChild(cardButtons); // Troisème enfant de questionCard
-    questionScreen.appendChild(questionCard);
-    questionScreen.appendChild(cardButtons);
+  // Changer la classe des boutons en fonction de la question
+  trueButton.classList.remove("correct", "incorrect");
+  trueButton.classList.add(question.vrai);
+  falseButton.classList.remove("correct", "incorrect");
+  falseButton.classList.add(question.faux);
+  correctButton.disabled = false;
+  incorrectButton.disabled = false;
+  console.log(correctButton);
+  correctButton.removeEventListener("click", countScore);
+  correctButton = document.querySelector(".correct");
+  correctButton.addEventListener("click", countScore);
+  console.log(score);
 }
-// On crée les 10 questionCards à l'aide d'une boucle
-for (const value of questionCards) {
-    createQuestion(value);
-    console.log("Done"); // Message de vérification
+
+function questionSuivante() {
+  // Vérifier si nous avons atteint la fin du tableau
+  if (indexQuestionCourante < questionCards.length) {
+    // Afficher la question suivante
+    afficherQuestion(questionCards[indexQuestionCourante]);
+
+    // Incrémenter la valeur de la barre de progression de 10
+    progressBarValue += 10;
+    // CODE POUR AFFICHER LE NUMERO DE LA QUESTION ACTUELLE
+    questionNumber.innerHTML = `Question n°${progressBarValue / 10}`;
+    questionText.style.backgroundColor = "#f28c11"; // On remet le fond de la question en orange
+
+    // Mettre à jour la valeur de la balise <meter>
+    progressBar.value = progressBarValue;
+    // Kana - ca marche pas maintenant,il faut creer le class pour dernier button "suivant" -> Kana faire lundi
+    const scoreDisplay = document.getElementsByClassName("score")[0];
+    scoreDisplay.innerText = `Your score : ${score}/10`;
+  }
+  if (indexQuestionCourante === questionCards.length - 1) {
+    btnSuivant.innerText = "Résultats";
+  } else if (indexQuestionCourante === questionCards.length) {
+    // Si nous sommes arrivés à la fin du tableau, afficher la page ranking
+    goResult();
+  }
+
+  indexQuestionCourante++;
+}
+
+btnNext.forEach((btn) => {
+  btn.addEventListener("click", questionSuivante);
+});
+
+// ------------ Start the game -----------------
+
+function startQuestions() {
+  homepage.style.display = "none";
+  questionsScreen.style.display = "block";
+  footerScreen.style.display = "none";
+  btnSuivant.style.display = "block";
+}
+btnStart.addEventListener("click", startQuestions);
+
+// ------------- See ranking ---------------
+
+function goResult() {
+  questionsScreen.style.display = "none";
+  resultScreen.style.display = "block";
+  btnSuivant.style.display = "none";
+}
+
+// ------------- PLAY AGAIN ----------------
+
+function backHome() {
+  resultScreen.style.display = "none";
+  homepage.style.display = "block";
+  footerScreen.style.display = "block";
+  indexQuestionCourante = 0;
+  progressBarValue = 0;
+  btnSuivant.innerText = "Suivant";
+}
+playAgain.addEventListener("click", backHome);
+
+// Kana compter des scores de utiliseteur, il faut s'affichier sur chque page-> Je le fait dans la semaine prochaine.
+
+let score = 0;
+function countScore() {
+  score = score + 1;
 }
