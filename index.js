@@ -154,26 +154,29 @@ starMaker(30);
 
 //---------------------------------------------PSEUDO FORM --------------------------------------------------------------------------
 document
-  .getElementById("nameForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault(); // Empêche le rechargement de la page
+    .getElementById("nameForm")
+    .addEventListener("submit", function (event) {
+        event.preventDefault(); // Empêche le rechargement de la page
 
-    let name = document.getElementById("nameInput").value;
-    let pseudoChange = document.getElementById("pseudo_change").value; // Récupération de la valeur du deuxième mot
+        let name = document.getElementById("nameInput").value;
+        let pseudoChange = document.getElementById("pseudoChange").value; // Récupération de la valeur du deuxième mot
+        let pseudoChange2 = document.getElementById("pseudoChange2").value; // Récupération de la valeur du troisième mot
 
-    // Vérification si le champ du pseudo est vide
-    if (name.trim() === "") {
-      alert("Mets un Pseudo on t'a dit !");
-      return; // Arrête l'exécution de la fonction
-    }
+        // Vérification si le champ du pseudo est vide
+        if (name.trim() === "") {
+            alert("Mets un Pseudo on t'a dit !");
+            return; // Arrête l'exécution de la fonction
+        }
 
-    let replacedText = "Salut [NOM] ! Prêt à jouer ? Appuie sur Start !"; // Texte à remplacer, [NOM] et [AUTRE_MOT] seront remplacés
+        let replacedText = "Salut [NOM] ! Prêt à jouer ? Appuie sur Start !"; // Texte à remplacer
 
-    // Remplacement du premier mot
-    let updatedText = replacedText.replace("[NOM]", name);
-    // Remplacement du deuxième mot
-    updatedText = updatedText.replace("[AUTRE_MOT]", pseudoChange);
+        // Remplacement du premier mot
+        let updatedText = replacedText.replace("[NOM]", name);
+        // Remplacement du deuxième mot
+        updatedText = updatedText.replace("[AUTRE_MOT]", pseudoChange);
+        updatedText = updatedText.replace("[pseudoChange2]", pseudoChange2);
 
-    document.getElementById("output").innerText = updatedText;
-    document.getElementById("pseudo_change").innerText = name;
-  });
+        document.getElementById("output").innerText = updatedText;
+        document.getElementById("pseudoChange").innerText = name;
+        document.getElementById("pseudoChange2").innerText = name;
+    });
