@@ -13,110 +13,172 @@
     <!--------A MODIFIER-------->
     <title>Kaleien</title>
   </head>
+
   <body>
     <!-- ------ Top page ------------- -->
     <main>
-      <div id="homepage"> <!-- HOMEPAGE -->
+      <div id="homepage">
+        <!-- début HOMEPAGE -->
         <div id="pageTop"></div>
-          <div id="logo">
-            <img src="images/logo-150.svg" alt="Logo Kaleien" width="30%" />
-          </div>
-            <h1>Choisis ton Avatar</h1>
-              <div class="container">
-                  <section class="avatar">
-                    <article class="avatar1">
-                      <img src="images/avatar1.svg" alt="Avatar 1" id="chooseAvatar1" />
-                    </article>
-                    <article class="avatar2">
-                      <img src="images/avatar2.svg" alt="Avatar 2" id="chooseAvatar2" />
-                   </article>
-                   <article class="avatar3">
-                      <img src="images/avatar3.svg" alt="Avatar 3" id="chooseAvatar3" />
-                  </article>
-                  <article class="avatar4">
-                      <img src="images/avatar4.svg" alt="Avatar 4" id="chooseAvatar4" />
-                  </article>
-                  </section>
-                </div>
-                
-          <section class="pseudo">
-            <form id="pseudoForm">
-              <label for="pseudo"><h2>Nomme ton Avatar</h2></label><br />
-              <input type="text" id="pseudo" name="pseudo" required /><br />
-              <button type="button" onclick="validerPseudo()">Valider</button>
-            </form>
-
-        <section class="button-start">
-          <button id="btn_start" class="start">
+        <div id="logo">
+          <img src="images/logo-150.svg" alt="Logo Kaleien" width="30%" />
+        </div>
+        <h1>Choisis ton Avatar</h1>
+        <div class="container">
+          <section class="avatar">
+            <article class="avatar1">
+              <img
+                src="images/avatar1.svg"
+                alt="L'ours Kaleien avec des lunettes de Soleil"
+                data-avatar-id="1"
+              />
+            </article>
+            <article class="avatar2">
+              <img
+                src="images/avatar2.svg"
+                alt="L'ours Kaleien avec un noeud papillon"
+                data-avatar-id="2"
+              />
+            </article>
+            <article class="avatar3">
+              <img
+                src="images/avatar3.svg"
+                alt="L'ours Kaleien avec une moustache"
+                data-avatar-id="3"
+              />
+            </article>
+            <article class="avatar4">
+              <img
+                src="images/avatar4.svg"
+                alt="L'ours Kaleien avec du maquillage autour des yeux"
+                data-avatar-id="4"
+              />
+            </article>
+          </section>
+        </div>
+        <!-- ------ Pseudo Form ------------- -->
+        <section class="pseudo">
+          <form id="nameForm">
+            <input type="text" id="nameInput" placeholder="Entre ton pseudo" />
+            <button id="envoyer" type="submit">Envoyer</button>
+          </form>
+          <p id="output"></p>
+        </section>
+        <!-- ------ Start Button ---------------->
+        <section class="startSection">
+          <button id="btnStart" class="btnNext">
             <h2>Start</h2>
           </button>
         </section>
-      </div> <!-- HOMEPAGE -->
+      </div>
+      <!-- Fin HOMEPAGE -->
 
       <!-- ------ Question page ------------- -->
 
-      <div id="questions_screen" class="questions_screen">
-        <div class="question-header">
+      <div id="questionsScreen" class="questionsScreen">
+        <div class="questionHeader">
           <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
-          <h3 class="question-number"></h3> <!-----------Va se remplir grâce au code JS---------->
-          <h4 class="pseudo">Pseudo</h4>
+          <p id="pseudoChange" class="pseudoResult">Pseudo</p>
+          <label for="progress"></label>
+          <meter id="progressBar" min="0" max="100" value="0"></meter>
+          <h3 class="questionNumber">
+            <!------Va se remplir grâce au code JS------>
+          </h3>
         </div>
-        <!---------------QUESTION CARDS HERE------------->
+        <div class="questionCard">
+          <img class="questionImg" />
+          <p class="questionText"></p>
+        </div>
+        <div class="cardButtons">
+          <!-------Bouttons VRAI/FAUX--------->
+          <button class="answerButton true correct">VRAI</button>
+          <button class="answerButton false incorrect">FAUX</button>
+        </div>
       </div>
-      <button id ="btn_next" class="suivant">Suivant</button>
+      <!---------Bouttons en display: none sur la page accueil--------->
+      <button id="btnSuivant" class="btnNext">Suivant</button>
+      <!--btn suivant: id + class vraiment nécessaire ?-->
     </main>
     <!-- ------------ Result page --------------- -->
-    <div id="result_screen" class="result_screen">
-     <div id="PageRanking">
-      <div id="scoreimg">
-        <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
+    <div id="resultScreen" class="resultScreen">
+      <div id="PageRanking">
+        <div id="headerResult">
+          <img src="images/avatar1.svg" alt="Avatar 1" class="playerAvatar" />
+          <strong>
+            <p class="score"></p>
+          </strong>
+          <!-- <label for="progress"></label> -->
+          <!-- <meter id="progress" value="10" min="0" max="10"></meter> -->
+          <p id="pseudoChange2" class="pseudoResult">Pseudo</p>
+        </div>
+        <div id="rankingList">
+          <ol>
+            <li id="user1">
+              <span>1</span>
+              <img src="images/first.svg" /><img
+                src="images/avatar1.svg"
+                alt="Avatar 1"
+              /><span class="userName">Thien</span
+              ><span class="points">10 points</span>
+            </li>
+            <li id="user2">
+              <span>2</span>
+              <img src="images/second.svg" /><img
+                src="images/avatar2.svg"
+                alt="Avatar 2"
+              /><span class="userName">Léo-Paul</span
+              ><span class="points">9 points</span>
+            </li>
+            <li id="user3">
+              <span>3</span>
+              <img src="images\third.svg" /><img
+                src="images/avatar3.svg"
+                alt="Avatar 3"
+              /><span class="userName">Kana</span
+              ><span class="points">8 points</span>
+            </li>
+            <li id="user4">
+              <span>4</span><img src="images/avatar3.svg" alt="Avatar 3" /><span
+                class="userName"
+                >Yoda</span
+              ><span class="points">5 points</span>
+            </li>
+            <li id="user4">
+              <span>5</span><img src="images/avatar3.svg" alt="Avatar 3" /><span
+                class="userName"
+                >Matthieu</span
+              ><span class="points">4 points</span>
+            </li>
+            <li id="user5">
+              <span>6</span><img src="images/avatar3.svg" alt="Avatar 3" /><span
+                class="userName"
+                >Ben</span
+              ><span class="points">3 points</span>
+            </li>
+          </ol>
+          <button id="playAgain">PLAY AGAIN</button>
+          <label for="comment">Leave us a comment:</label>
+          <input
+            name="comment"
+            id="comment"
+            type="text"
+            placeholder="Great Game!"
+            required
+            minlength="4"
+            maxlength="20"
+            size="25"
+          />
+        </div>
       </div>
-      <strong>
-      <p class="score">YOUR NAME</p>
-      <p class="score">YOUR SCORE : 8/10</p>
-      </strong>
-      <div id="rankinglist">
-      <ol>
-        <li id="user1"><img src="images/first.svg"><img src="images/avatar1.svg" alt="Avatar 1" /><span
-            class="username">Thien</span><span class="points">10
-            points</span></li>
-        <li id="user2"><img src="images/second.svg"><img src="images/avatar2.svg" alt="Avatar 2" /><span
-            class="username">Léo-Paul</span><span class="points">9
-            points</span></li>
-        <li id="user3"><img src="images\third.svg"><img src="images/avatar3.svg" alt="Avatar 3" /><span
-            class="username">Kana</span><span class="points">8
-            points</span></li>
-        <li id="user4"><span>4</span><img src="images/avatar3.svg" alt="Avatar 3" /><span
-            class="username">Yoda</span><span class="points">5
-            points</span></li>
-        <li id="user4"><span>5</span><img src="images/avatar3.svg" alt="Avatar 3" /><span
-            class="username">Matthieu</span><span class="points">4
-            points</span></li>
-        <li id="user5"><span>6</span><img src="images/avatar3.svg" alt="Avatar 3" /><span
-            class="username">Ben</span><span class="points">3
-            points</span></li>
-      </ol>
-      <button id="playagain">PLAY AGAIN</button>
-      <label for="comment">Leave us a comment:</label>
-      <input
-        name="comment"
-        id="comment"
-        type="text"
-        placeholder="Great Game!"
-        required
-        minlength="4"
-        maxlength="20"
-        size="25"
-      />
-      </div>
-     </div>
     </div>
-    <footer>
+    <!-- ------------ Footer --------------- -->
+    <footer id="footerScreen">
       <p>Copiright 2024 Wild Code School</p>
     </footer>
+    <script src="variables.js"></script>
     <script src="questionCards.js"></script>
     <script src="createQuestion.js"></script>
+    <script src="buttons.js"></script>
     <script src="index.js"></script>
   </body>
-
 </html>

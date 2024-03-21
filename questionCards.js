@@ -1,40 +1,43 @@
 const questionCards = [
   {
     img: "images/baseball_kaleien.svg",
-    alt: "",
+    alt: "Le blason d'une ligue fictive de baseball, ornée de la tête de Kaleien",
     question: "Le match de baseball le plus long du monde à duré plus de 8h",
-    answer: "",
+    answer:
+      "Le 14 juin 1966, les Marlins de Miami battent Cardinals de St. Petersburg en 6h59 !",
     vrai: "correct",
     faux: "incorrect",
   },
   {
     img: "images/programing.svg",
-    alt: "",
+    alt: "Kaleien porte un sweat à capuche gris et est en train de programmer",
     question:
       "Le langage de programmation les plus rémunérateur en 2023 est le C# ",
-    answer: "",
+    answer:
+      "Le langage Solidity, orienté objet de haut niveau avec un salaire moyen de 188 000 $",
     vrai: "incorrect",
     faux: "correct",
   },
   {
     img: "images/solar-system.svg",
-    alt: "",
+    alt: "Un dessin des astres du système solaire ayant les yeux et le sourire de Kaleien",
     question: "La Terre est la 3ème planète la plus proche du Soleil",
-    answer: "",
+    answer:
+      "De la plus proche à la plus lointaine : Mercure, Vénus, la Terre, Mars, Jupiter, Saturne, Uranus et Neptune",
     vrai: "correct",
     faux: "incorrect",
   },
   {
     img: "images/french.svg",
-    alt: "",
+    alt: "Kaleien portant un bérêt rouge et une moustache",
     question: "En France, il y a 15 jours feriés par an.",
-    answer: "",
+    answer: "Il y a 11 jours fériés par an en France",
     vrai: "incorrect",
     faux: "correct",
   },
   {
     img: "images/Lyon-question.svg",
-    alt: "",
+    alt: "Le drapeau de la ville de Lyon avec la tête de Kaleien à la place du lion",
     question: "Lyon est appelé ainsi depuis le 13e siècle",
     answer: "",
     vrai: "correct",
@@ -42,7 +45,7 @@ const questionCards = [
   },
   {
     img: "images/cinema-question.svg",
-    alt: "",
+    alt: "Kaleien portant des lunettes 3D et entouré de symboles du cinéma (clap, popcorn, pellicule et caméra argentique)",
     question:
       "Titanic est le premier film a avoir été récompensé par 11 Oscars",
     answer:
@@ -52,36 +55,39 @@ const questionCards = [
   },
   {
     img: "images/art-question.svg",
-    alt: "",
+    alt: "Un tableau de Kaleien à la façon de Picasso",
     question:
       "Les joueurs de cartes de Cézanne est le tableau qui s'est vendu le plus cher, pour 250 millions USD",
-    answer: "",
+    answer:
+      "Salvator Mundi de Léonard de Vinci s'est vendu pour 450 millions USD. Les joueurs de cartes est le 4ème plus cher.",
     vrai: "incorrect",
     faux: "correct",
   },
   {
     img: "images/pizza-question.svg",
-    alt: "",
+    alt: "Une enseigne fictive de Pizzeria ornée de Kaleien avec une toque",
     question: `La "Pizza Margherita" a été créée en l'honneur de la ville Margherita`,
-    answer: "",
+    answer:
+      "La Pizza Margherita a été créée en l'honneur de la reine d'Italie, Margherita de Savoie",
     vrai: "incorrect",
     faux: "correct",
   },
   {
     img: "images/ewok-question.svg",
-    alt: "",
+    alt: "Kaleien est déguisé en Ewok de Star Wars",
     question:
       "Créé par George Lucas, l'ewok apparait pour la première fois dans Star Wars, épisode IV : Un nouvel espoir",
-    answer: "",
+    answer:
+      "Les ewoks apparaissent pour la première fois dans L'épisode VI : Le Retour du Jedi (1983)",
     vrai: "incorrect",
     faux: "correct",
   },
   {
     img: "images/onepiece-question.svg",
-    alt: "",
+    alt: "Kaleien porte le chapeau de Luffy dans One Piece",
     question:
       "Le dernier volume de ONE PIECE, paru le 4 mars 2024 au Japon, est le n°108",
-    answer: "",
+    answer: "One Piece devrait se terminer en 2024",
     vrai: "correct",
     faux: "incorrect",
   },
