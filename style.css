@@ -57,7 +57,7 @@ h2 {
 }
 
 #logo img {
-  width:30%;
+  width: 30%;
 }
 
 .container {
@@ -70,8 +70,8 @@ h2 {
   justify-content: center;
 }
 
-.avatar article{
-  cursor:pointer;
+.avatar article {
+  cursor: pointer;
 }
 
 article {
@@ -168,7 +168,9 @@ input {
 meter::-webkit-meter-optimum-value {
   background: #05a67a;
 }
-meter::-moz-meter-bar { /* Firefox Pseudo Class */
+
+meter::-moz-meter-bar {
+  /* Firefox Pseudo Class */
   background: #05a67a;
 }
 
@@ -199,15 +201,24 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
   height: 100%;
   border-radius: 8px;
 }
-.questionBlock{
-  height: 100px; /* Set the fixed height of the container */
-  overflow: hidden; /* Hide any overflow text */
-  display: flex; /* Use flexbox for centering */
-  align-items: center; /* Vertically center content */
-  justify-content: center; /* Horizontally center content */
-  margin: 0; /* Remove any default margin */
-  padding: 0; /* Remove any default padding */
+
+.questionBlock {
+  height: 100px;
+  /* Set the fixed height of the container */
+  overflow: hidden;
+  /* Hide any overflow text */
+  display: flex;
+  /* Use flexbox for centering */
+  align-items: center;
+  /* Vertically center content */
+  justify-content: center;
+  /* Horizontally center content */
+  margin: 0;
+  /* Remove any default margin */
+  padding: 0;
+  /* Remove any default padding */
 }
+
 .true,
 .false {
   font-size: 3rem;
@@ -225,17 +236,11 @@ main button {
   box-shadow: black 1px 1px 5px;
   cursor: pointer;
 }
-#envoyer{
-  color: black;
-}
 
 #envoyer {
   color: black;
 }
 
-#envoyer{
-  color: black;
-}
 
 .true {
   background-color: #0aa67a;
@@ -255,6 +260,8 @@ main button {
 
 
 /* -----------Kana Ranking Page------------------ */
+
+
 
 #headerResult {
   width: 100%;
@@ -364,6 +371,10 @@ li {
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
+li:hover {
+  background-color: #05a67a;
+}
+
 span {
   font-family: "Francois One", sans-serif;
   color: orange;
@@ -379,7 +390,7 @@ span {
 
 .points {
   font-family: "Francois One", sans-serif;
-  color: #05a67a;
+  color: #532884;
   font-size: 20px;
 }
 
@@ -395,7 +406,12 @@ ol>li>img {
   height: 5vh;
   background-color: orange;
   margin-bottom: 10px;
-  transition: all 0.3s;
+  transition: all .3s;
+}
+
+#playAgain:hover {
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  border-color: transparent;
 }
 
 label {
@@ -423,6 +439,7 @@ html {
 #homepage {
   height: 100%;
 }
+
 #footerScreen {
   text-align: center;
   font-family: "Francois One", sans-serif;
@@ -430,8 +447,8 @@ html {
   background-color: #f28c11;
   color: white;
   position: absolute;
-    width: 100%;
-bottom: 0;
+  width: 100%;
+  bottom: 0;
 }
 
 .star {
@@ -455,7 +472,7 @@ bottom: 0;
   }
 }
 
-@media screen and (min-width: 920px){
+@media screen and (min-width: 920px) {
 
   /* ------toppage-------- */
 
@@ -470,21 +487,24 @@ bottom: 0;
   }
 
   #envoyer {
-    /*width: 6vw;
-    height: 3vh;*/
+    width: 6vw;
+    height: 3vh;
     font-size: 1rem;
-  }
-
-  #btnStart {
-    height: 6vh;
-
   }
 
   #logo img {
     width: 15%;
   }
+
   h1 {
     padding: 2rem;
+  }
+
+  h2 {
+    font-size: 34px;
+    text-align: center;
+    width: 8vw;
+    height: 13vh;
   }
 
   .container {
@@ -509,7 +529,7 @@ bottom: 0;
   }
 
   footer>p {
-    font-size: 1rem;
+    font-size: 25px;
   }
 
   /* -----questionpage----- */
@@ -572,7 +592,7 @@ bottom: 0;
   }
 
   .pseudoResult {
-    font-size: 40px; 
+    font-size: 40px;
     /* padding: 50px; padding sur pseudoResult ? */
   }
 
@@ -612,14 +632,15 @@ bottom: 0;
     width: 200px;
     height: 100%;
     font-size: 2rem;
-    border-radius:10px;
+    border-radius: 10px;
     white-space: nowrap;
-    color:white;
+    color: white;
   }
 
   #rankingList>label {
     font-size: 30px;
   }
+
   #pseudoChange2 {
     font-size: 60px;
   }
@@ -669,4 +690,3 @@ Q page
 Last page 
 - trop de espace 
 - taille de button play again 
-
