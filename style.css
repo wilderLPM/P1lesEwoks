@@ -144,7 +144,7 @@ input {
 
 
 .playerAvatar {
-  grid-row-start: 0; /*  2 ? */
+  grid-row-start: 1; /*  2 ? */
   grid-column-start: 2;
   grid-column-end: 2;
   padding: 10%;
@@ -254,9 +254,6 @@ main button {
   justify-self: center;
 }
 
-.headerResult>h3 {
-  grid-row: 2;
-}
 
 .pseudoResult {
   color: white;
@@ -546,11 +543,7 @@ html {
   }
 
   /* -----questionpage----- */
-  img.playerAvatar {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-  }
+ 
 
   #headerResult {
     flex-direction: row;
