@@ -448,6 +448,7 @@ label {
   width: 100%;
   height: 50px;
   bottom: 0;
+  display:none;
 }
 
 .star {
@@ -507,7 +508,6 @@ label {
   }
 
   article {
-
     width: 15%;
   }
 
@@ -574,7 +574,6 @@ label {
   .questionImg {
     width: 20%;
   }
-
 
   #btnSuivant {
     width: 15vw;
@@ -671,9 +670,17 @@ label {
 
   #comment {
     width: 500px;
-
     height: 70px;
 
+  }
+
+  #footerScreen {
+    bottom: 0;
+  
+  }
+
+  .startSection {
+    margin: 2rem 0rem 3rem 0rem;
   }
 }
 
