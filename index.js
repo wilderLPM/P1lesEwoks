@@ -1,10 +1,10 @@
-let lastClickedAvatar = null;
-function configureAvatarButton(avatarButtons) {
-  for (let i = 0; i < avatarButtons.length; i++) {
-    avatarButtons[i].addEventListener("click", function (event) {
-      event.preventDefault();
+let lastClickedAvatar = null; // Définir le dernier avatar selectioné
+function configureAvatarButton(avatarButtons) { // Création de la fonction de modif CSS au click
+  for (let i = 0; i < avatarButtons.length; i++) { // Boucle pour parcourir les 4 avatars
+    avatarButtons[i].addEventListener("click", function (event) { // AdEventListener a Click
+      event.preventDefault(); // Empecher le raffraichissement de la page
       // Réinitialise les styles du dernier bouton cliqué (s'il existe)
-      if (lastClickedAvatar) {
+      if (lastClickedAvatar) { // Le Style CSS de base
         lastClickedAvatar.style.transform = "scale(1)";
         lastClickedAvatar.style.backgroundColor = "";
         lastClickedAvatar.style.borderRadius = "";
@@ -24,51 +24,51 @@ configureAvatarButton(avatarButton2, 2);
 configureAvatarButton(avatarButton3, 3);
 configureAvatarButton(avatarButton4, 4);
 
-function createAvatar10() {
-    let avatar10 = document.createElement("img");
-    avatar10.classList.add("playerAvatar");
-    avatar10.src = "images/avatar1.svg";
-    questionHeader.appendChild(avatar10);
-}
-
-function createAvatar20() {
-    let avatar20 = document.createElement("img");
-    avatar20.classList.add("playerAvatar");
-    avatar20.src = "images/avatar2.svg";
-    questionHeader.appendChild(avatar20);
-}
-
-function createAvatar30() {
-    let avatar30 = document.createElement("img");
-    avatar30.classList.add("playerAvatar");
-    avatar30.src = "images/avatar3.svg";
-    questionHeader.appendChild(avatar30);
-}
-
-function createAvatar40() {
-    let avatar40 = document.createElement("img");
-    avatar40.classList.add("playerAvatar");
-    avatar40.src = "images/avatar4.svg";
-    questionHeader.appendChild(avatar40);
-}
-
 function activerFonctionClass() {
     if (lastClickedAvatar) {
         if (lastClickedAvatar.classList.contains("avatar1")) {
-            // Appeler la fonction pour la classe avatar1
-            return createAvatar10();
+          let avatar10 = document.createElement("img");
+          avatar10.classList.add("playerAvatar");
+          avatar10.src = "images/avatar1.svg";
+          questionHeader.appendChild(avatar10);
+          let avatarResult10 = document.createElement("img");
+          avatarResult10.classList.add("playerAvatarResult");
+          avatarResult10.src = "images/avatar1.svg";
+          headerResult.appendChild(avatarResult10);
+
         } else if (lastClickedAvatar.classList.contains("avatar2")) {
-            // Appeler la fonction pour la classe avatar2
-            return createAvatar20();
+          let avatar20 = document.createElement("img");
+          avatar20.classList.add("playerAvatar");
+          avatar20.src = "images/avatar2.svg";
+          questionHeader.appendChild(avatar20);
+          let avatarResult20 = document.createElement("img");
+          avatarResult20.classList.add("playerAvatarResult");
+          avatarResult20.src = "images/avatar2.svg";
+          headerResult.appendChild(avatarResult20);
+
         } else if (lastClickedAvatar.classList.contains("avatar3")) {
-            // Appeler la fonction pour la classe avatar3
-            return createAvatar30();
+          let avatar30 = document.createElement("img");
+          avatar30.classList.add("playerAvatar");
+          avatar30.src = "images/avatar3.svg";
+          questionHeader.appendChild(avatar30);
+          let avatarResult30 = document.createElement("img");
+          avatarResult30.classList.add("playerAvatarResult");
+          avatarResult30.src = "images/avatar3.svg";
+          headerResult.appendChild(avatarResult30);
+
         } else if (lastClickedAvatar.classList.contains("avatar4")) {
-            // Appeler la fonction pour la classe avatar4
-            return createAvatar40();
+          let avatar40 = document.createElement("img");
+          avatar40.classList.add("playerAvatar");
+          avatar40.src = "images/avatar4.svg";
+          questionHeader.appendChild(avatar40);
+          let avatarResult40 = document.createElement("img");
+          avatarResult40.classList.add("playerAvatarResult");
+          avatarResult40.src = "images/avatar4.svg";
+          headerResult.appendChild(avatarResult40);
         }
     }
 }
+
 function validerPseudo() {
     // Récupérer la valeur du pseudo
     let pseudo = document.getElementById("pseudo").value;

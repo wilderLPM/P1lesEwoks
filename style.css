@@ -4,12 +4,18 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+  position: relative;
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: #532884;
   font-family: "Francois One", sans-serif;
   height: 100%;
+  
 }
 
 h1 {
@@ -41,19 +47,6 @@ h2 {
 
 #logo {
   text-align: center;
-}
-
-.headerScreen {
-  display: block;
-}
-
-.questionsScreen {
-  display: none;
-}
-
-.resultScreen {
-  display: none;
-
 }
 
 #logo img {
@@ -93,17 +86,21 @@ article {
   display: flex;
   text-align: center;
   justify-content: center;
-  margin-bottom: 5rem;
-  margin-bottom: 3vh;
+  margin: 2rem 0rem 2rem 0rem;
 }
 
 #btnStart {
   background-color: #05a67a;
   text-shadow: 0px -2px #05a67a;
-  border-radius: 90%;
-  height: 40px;
   border-radius: 50%;
   height: 50px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+#btnStart:hover {
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  border-color: transparent;
 }
 
 input {
@@ -392,6 +389,7 @@ ol>li>img {
 #playAgain:hover {
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
   border-color: transparent;
+  cursor: pointer;
 }
 
 label {
@@ -411,24 +409,16 @@ label {
   background-color: white;
 }
 
-html {
-  position: relative;
-  height: 100%;
-}
-
-#homepage {
-  height: 100%;
-}
-
 #footerScreen {
   text-align: center;
   font-family: "Francois One", sans-serif;
-  height: 8%;
   background-color: #f28c11;
   color: white;
   position: absolute;
   width: 100%;
+  height: 50px;
   bottom: 0;
+  display:none;
 }
 
 .star {
@@ -476,10 +466,6 @@ html {
     width: 15%;
   }
 
-  h1 {
-    padding: 2rem;
-  }
-
   h2 {
     font-size: 34px;
     text-align: center;
@@ -492,7 +478,6 @@ html {
   }
 
   article {
-
     width: 15%;
   }
 
@@ -508,10 +493,6 @@ html {
     width: 100%;
   }
 
-  footer>p {
-    font-size: 25px;
-  }
-
   /* -----questionpage----- */
 
   .questionNumber {
@@ -519,6 +500,16 @@ html {
     font-size: 30px;
   }
 
+  #questionHeader {
+    width: 100%;
+    height: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 80px 30px 50px 10px; /* removed 10px row 1 */
+    grid-gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+  }
 
   .questionHeader>img {
     width: 20%;
@@ -529,10 +520,6 @@ html {
   .questionCard {
     display: flex;
     flex-direction: row;
-    margin: 3rem;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    margin-right: 0;
   }
 
   .questionText {
@@ -546,7 +533,7 @@ html {
  
 
   #headerResult {
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-around;
   }
 
@@ -554,11 +541,11 @@ html {
     width: 20%;
   }
 
-
   #btnSuivant {
     width: 15vw;
     height: 5vh;
     margin: 2% auto;
+    transition: all .3s;
   }
 
   /* ------Ranking page----- */
@@ -611,6 +598,7 @@ html {
     border-radius: 10px;
     white-space: nowrap;
     color: white;
+    border-style: none;
   }
 
   #rankingList>label {
@@ -648,9 +636,17 @@ html {
 
   #comment {
     width: 500px;
-
     height: 70px;
 
+  }
+
+  #footerScreen {
+    bottom: 0;
+  
+  }
+
+  .startSection {
+    margin: 2rem 0rem 3rem 0rem;
   }
 }
 
