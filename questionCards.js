@@ -4,7 +4,7 @@ const questionCards = [
     alt: "Le blason d'une ligue fictive de baseball, ornée de la tête de Kaleien",
     question: "Le match de baseball le plus long du monde à duré plus de 8h",
     answer:
-      "Le 14 juin 1966, les Marlins de Miami battent les Cardinals de St. Petersburg en 6h59 !",
+      "Le match de baseball le plus long de l'histoire s'est déroulé les 1er et 2 mai 1984. Il opposait les White Sox de Chicago aux Brewers de Milwaukee et a duré 8h et 6 min",
     vrai: "correct",
     faux: "incorrect",
   },
@@ -39,7 +39,8 @@ const questionCards = [
     img: "images/Lyon-question.svg",
     alt: "Le drapeau de la ville de Lyon avec la tête de Kaleien à la place du lion",
     question: "Lyon est appelé ainsi depuis le 13e siècle",
-    answer: "",
+    answer:
+      "Afin d’imposer le pouvoir de Rome, le gouverneur décide d’apposer à la nouvelle cité un nom latin : Lugdunum, puis Lugduum, puis Lydiuum, puis, enfin, en Lyon, à partir du XIIIe siècle.",
     vrai: "correct",
     faux: "incorrect",
   },
@@ -87,7 +88,7 @@ const questionCards = [
     alt: "Kaleien porte le chapeau de Luffy dans One Piece",
     question:
       "Le dernier volume de ONE PIECE, paru le 4 mars 2024 au Japon, est le n°108",
-    answer: "One Piece devrait se terminer en 2024",
+    answer: "Le prochain volume de ONE PIECE devrait sortir cet été",
     vrai: "correct",
     faux: "incorrect",
   },
